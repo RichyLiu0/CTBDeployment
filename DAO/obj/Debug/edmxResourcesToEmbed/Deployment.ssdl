@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="STModelStoreContainer">
+    <EntitySet Name="D_Project" EntityType="STModel.Store.D_Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="D_ProjectCodeServer" EntityType="STModel.Store.D_ProjectCodeServer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="D_ProjectPackage" EntityType="STModel.Store.D_ProjectPackage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="D_SqlServer" EntityType="STModel.Store.D_SqlServer" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="D_Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="D_ProjectCodeServer">
+    <Key>
+      <PropertyRef Name="CodeServerID" />
+    </Key>
+    <Property Name="CodeServerID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ServerIndex" Type="int" Nullable="false" />
+    <Property Name="ProjectID" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="LoginUser" Type="nvarchar" MaxLength="150" />
+    <Property Name="LoginPwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="D_ProjectPackage">
+    <Key>
+      <PropertyRef Name="PackageID" />
+    </Key>
+    <Property Name="PackageID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Version" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="PackageName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PackagePath" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="D_SqlServer">
+    <Key>
+      <PropertyRef Name="SqlServerID" />
+    </Key>
+    <Property Name="SqlServerID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ConnectionStr" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>

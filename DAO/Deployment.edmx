@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="STModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="STModelStoreContainer">
+          <EntitySet Name="D_Project" EntityType="STModel.Store.D_Project" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="D_ProjectCodeServer" EntityType="STModel.Store.D_ProjectCodeServer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="D_ProjectPackage" EntityType="STModel.Store.D_ProjectPackage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="D_SqlServer" EntityType="STModel.Store.D_SqlServer" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="D_Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="D_ProjectCodeServer">
+          <Key>
+            <PropertyRef Name="CodeServerID" />
+          </Key>
+          <Property Name="CodeServerID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ServerIndex" Type="int" Nullable="false" />
+          <Property Name="ProjectID" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="LoginUser" Type="nvarchar" MaxLength="150" />
+          <Property Name="LoginPwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="D_ProjectPackage">
+          <Key>
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Name="PackageID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Version" Type="nchar" Nullable="false" MaxLength="50" />
+          <Property Name="PackageName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PackagePath" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="D_SqlServer">
+          <Key>
+            <PropertyRef Name="SqlServerID" />
+          </Key>
+          <Property Name="SqlServerID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ConnectionStr" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ST.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="STEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="D_Project" EntityType="ST.Model.D_Project" />
+          <EntitySet Name="D_ProjectCodeServer" EntityType="ST.Model.D_ProjectCodeServer" />
+          <EntitySet Name="D_ProjectPackage" EntityType="ST.Model.D_ProjectPackage" />
+          <EntitySet Name="D_SqlServer" EntityType="ST.Model.D_SqlServer" />
+        </EntityContainer>
+        <EntityType Name="D_Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="D_ProjectCodeServer">
+          <Key>
+            <PropertyRef Name="CodeServerID" />
+          </Key>
+          <Property Type="String" Name="CodeServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ServerIndex" Nullable="false" />
+          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Path" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="D_ProjectPackage">
+          <Key>
+            <PropertyRef Name="PackageID" />
+          </Key>
+          <Property Type="String" Name="PackageID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Version" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="PackageName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PackagePath" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="D_SqlServer">
+          <Key>
+            <PropertyRef Name="SqlServerID" />
+          </Key>
+          <Property Type="String" Name="SqlServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConnectionStr" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="STModelStoreContainer" CdmEntityContainer="STEntities">
+          <EntitySetMapping Name="D_Project">
+            <EntityTypeMapping TypeName="ST.Model.D_Project">
+              <MappingFragment StoreEntitySet="D_Project">
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D_ProjectCodeServer">
+            <EntityTypeMapping TypeName="ST.Model.D_ProjectCodeServer">
+              <MappingFragment StoreEntitySet="D_ProjectCodeServer">
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="LoginPwd" ColumnName="LoginPwd" />
+                <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
+                <ScalarProperty Name="CodeServerID" ColumnName="CodeServerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D_ProjectPackage">
+            <EntityTypeMapping TypeName="ST.Model.D_ProjectPackage">
+              <MappingFragment StoreEntitySet="D_ProjectPackage">
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PackagePath" ColumnName="PackagePath" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D_SqlServer">
+            <EntityTypeMapping TypeName="ST.Model.D_SqlServer">
+              <MappingFragment StoreEntitySet="D_SqlServer">
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ConnectionStr" ColumnName="ConnectionStr" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="SqlServerID" ColumnName="SqlServerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="STModel" ZoomLevel="47" ShowGrid="true" SnapToGrid="true">
+        <EntityTypeShape EntityType="ST.Model.D_Project" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ST.Model.D_ProjectCodeServer" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ST.Model.D_ProjectPackage" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ST.Model.D_SqlServer" Width="1.5" PointX="0.75" PointY="4.75" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

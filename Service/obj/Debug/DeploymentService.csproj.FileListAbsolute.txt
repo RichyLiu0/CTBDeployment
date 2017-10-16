@@ -10,3 +10,15 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentModel
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.pdb
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentService.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentService.pdb
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentDAO.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentModel.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\Ucsmy.Framework.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\LitJson.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentDAO.pdb
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentModel.pdb
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.csprojResolveAssemblyReference.cache
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.pdb

@@ -20,14 +20,13 @@ namespace Deployment.Web.Controllers
 
             var request = new Ucsmy.Framework.PageRequest<D_Project>()
                    {
-                       PageIndex = "PageIndex".ValueOfForm().TryInt(0),
-                       PageSize = "PageSize".ValueOfForm().TryInt(10),
+                       PageIndex = "PageIndex".ValueOfQuery().TryInt(0),
+                       PageSize = "PageSize".ValueOfQuery().TryInt(10),
                        OrderBy = t => t.OrderBy(to => to.CreateTime)
                    };
 
             var list = DeploymentDAO.UnitService.CTBDeployment.PageList<D_Project>(request);
-            ViewBag.Data=
-            return View();
+            return View(list);
         }
 
 

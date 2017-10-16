@@ -5,3 +5,9 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Model\bin\Debug\LitJson.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Model\obj\Debug\DeploymentModel.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Model\obj\Debug\DeploymentModel.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Model\obj\Debug\DeploymentModel.pdb
+C:\Users\rui\Documents\GitHub\CTBDeployment\Model\bin\Debug\DeploymentModel.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Model\bin\Debug\DeploymentModel.pdb
+C:\Users\rui\Documents\GitHub\CTBDeployment\Model\bin\Debug\Ucsmy.Framework.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Model\bin\Debug\LitJson.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Model\obj\Debug\DeploymentModel.dll
+C:\Users\rui\Documents\GitHub\CTBDeployment\Model\obj\Debug\DeploymentModel.pdb

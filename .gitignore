@@ -2,3 +2,4 @@
 *.cashe;
 build/;
 bin/;
+*.cache

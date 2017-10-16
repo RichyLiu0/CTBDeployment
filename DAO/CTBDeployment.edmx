@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="STModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="STModelStoreContainer">
-          <EntitySet Name="D_Project" EntityType="STModel.Store.D_Project" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="D_ProjectCodeServer" EntityType="STModel.Store.D_ProjectCodeServer" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="D_ProjectPackage" EntityType="STModel.Store.D_ProjectPackage" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="D_SqlServer" EntityType="STModel.Store.D_SqlServer" store:Type="Tables" Schema="dbo" />
+    <Schema Namespace="CTBDeployment.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CTBDeploymentStoreContainer">
+          <EntitySet Name="D_Project" EntityType="CTBDeployment.Store.D_Project" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.Store.D_ProjectCodeServer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.Store.D_ProjectPackage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.Store.D_SqlServer" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
         <EntityType Name="D_Project">
           <Key>
@@ -62,12 +62,12 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ST.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="STEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="D_Project" EntityType="ST.Model.D_Project" />
-          <EntitySet Name="D_ProjectCodeServer" EntityType="ST.Model.D_ProjectCodeServer" />
-          <EntitySet Name="D_ProjectPackage" EntityType="ST.Model.D_ProjectPackage" />
-          <EntitySet Name="D_SqlServer" EntityType="ST.Model.D_SqlServer" />
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CTBDeployment" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" >
+        <EntityContainer Name="CTBDeploymentEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="D_Project" EntityType="CTBDeployment.D_Project" />
+          <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
+          <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.D_ProjectPackage" />
+          <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.D_SqlServer" />
         </EntityContainer>
         <EntityType Name="D_Project">
           <Key>
@@ -121,10 +121,12 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="STModelStoreContainer" CdmEntityContainer="STEntities">
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="CTBDeployment" />
+        <Alias Key="Target" Value="CTBDeployment.Store" />
+        <EntityContainerMapping CdmEntityContainer="CTBDeploymentEntity" StorageEntityContainer="CTBDeploymentStoreContainer">
           <EntitySetMapping Name="D_Project">
-            <EntityTypeMapping TypeName="ST.Model.D_Project">
+            <EntityTypeMapping TypeName="CTBDeployment.D_Project">
               <MappingFragment StoreEntitySet="D_Project">
                 <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
@@ -136,7 +138,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="D_ProjectCodeServer">
-            <EntityTypeMapping TypeName="ST.Model.D_ProjectCodeServer">
+            <EntityTypeMapping TypeName="CTBDeployment.D_ProjectCodeServer">
               <MappingFragment StoreEntitySet="D_ProjectCodeServer">
                 <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
@@ -151,7 +153,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="D_ProjectPackage">
-            <EntityTypeMapping TypeName="ST.Model.D_ProjectPackage">
+            <EntityTypeMapping TypeName="CTBDeployment.D_ProjectPackage">
               <MappingFragment StoreEntitySet="D_ProjectPackage">
                 <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
@@ -165,7 +167,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="D_SqlServer">
-            <EntityTypeMapping TypeName="ST.Model.D_SqlServer">
+            <EntityTypeMapping TypeName="CTBDeployment.D_SqlServer">
               <MappingFragment StoreEntitySet="D_SqlServer">
                 <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
@@ -180,29 +182,28 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
-    <Connection>
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
       </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
+    </edmx:Connection>
+    <edmx:Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
-        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
-    </Options>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram Name="STModel" ZoomLevel="47" ShowGrid="true" SnapToGrid="true">
-        <EntityTypeShape EntityType="ST.Model.D_Project" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ST.Model.D_ProjectCodeServer" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ST.Model.D_ProjectPackage" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ST.Model.D_SqlServer" Width="1.5" PointX="0.75" PointY="4.75" />
+    <edmx:Diagrams>
+      <Diagram DiagramId="6501d824a1f1488bb091ff15693993e3" Name="关系图1">
+        <EntityTypeShape EntityType="CTBDeployment.D_Project" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CTBDeployment.D_ProjectCodeServer" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CTBDeployment.D_ProjectPackage" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CTBDeployment.D_SqlServer" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
-    </Diagrams>
-  </Designer>
+    </edmx:Diagrams>
+  </edmx:Designer>
 </edmx:Edmx>

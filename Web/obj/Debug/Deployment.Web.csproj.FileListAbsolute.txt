@@ -1,7 +1,6 @@
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Deployment.Web.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Deployment.Web.pdb
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Antlr3.Runtime.dll
-C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\AspNetPager.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentDAO.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentModel.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentService.dll
@@ -23,6 +22,7 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\System.Web.WebPages.Deplo
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\System.Web.WebPages.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\System.Web.WebPages.Razor.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Ucsmy.Framework.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Webdiyer.MvcPager.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\WebGrease.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentDAO.pdb
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentModel.pdb

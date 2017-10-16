@@ -52,33 +52,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deployment.Context.cs">
+    <Compile Include="CTBDeployment.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Deployment.Context.tt</DependentUpon>
+      <DependentUpon>CTBDeployment.tt</DependentUpon>
     </Compile>
-    <Compile Include="Deployment.cs">
+    <Compile Include="CTBDeployment.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Deployment.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Deployment.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Deployment.edmx</DependentUpon>
+      <DependentUpon>CTBDeployment.edmx</DependentUpon>
     </Compile>
     <Compile Include="D_Project.cs">
-      <DependentUpon>Deployment.tt</DependentUpon>
+      <DependentUpon>CTBDeployment.tt</DependentUpon>
     </Compile>
     <Compile Include="D_ProjectCodeServer.cs">
-      <DependentUpon>Deployment.tt</DependentUpon>
+      <DependentUpon>CTBDeployment.tt</DependentUpon>
     </Compile>
     <Compile Include="D_ProjectPackage.cs">
-      <DependentUpon>Deployment.tt</DependentUpon>
+      <DependentUpon>CTBDeployment.tt</DependentUpon>
     </Compile>
     <Compile Include="D_SqlServer.cs">
-      <DependentUpon>Deployment.tt</DependentUpon>
+      <DependentUpon>CTBDeployment.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelService\DbEntities.cs" />
+    <Compile Include="ModelService\QueryService.cs" />
+    <Compile Include="ModelService\UnitService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,20 +90,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Deployment.edmx">
+    <EntityDeploy Include="CTBDeployment.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Deployment.Designer.cs</LastGenOutput>
+      <LastGenOutput>CTBDeployment.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Deployment.Context.tt">
+    <Content Include="CTBDeployment.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Deployment.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Deployment.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Deployment.cs</LastGenOutput>
+      <LastGenOutput>CTBDeployment.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

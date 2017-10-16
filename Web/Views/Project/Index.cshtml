@@ -1,0 +1,58 @@
+﻿@using Webdiyer.WebControls.Mvc;
+
+
+
+@model List<DeploymentDAO.D_Project>
+
+<html>
+
+<head>
+    <title></title>
+
+</head>
+<body>
+
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th class="nowrap">ID
+        </th>
+            <th class="nowrap">项目名称
+        </th>
+            <th class="nowrap">项目编号
+        </th>
+            <th class="nowrap">备注
+        </th>
+            <th class="nowrap">创建时间
+        </th>
+            <th class="nowrap">创建人
+        </th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProjectCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Remark)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateUser)
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.Pager(Model.Count, 10, 1)
+</body>
+</html>

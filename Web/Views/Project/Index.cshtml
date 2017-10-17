@@ -2,10 +2,8 @@
 @using DeploymentDAO;
 @model Ucsmy.Framework.PagerResponse<D_Project>
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <title></title>
     <link href="~/Styles/common.css" rel="stylesheet" />
@@ -94,8 +92,8 @@
                     <td>
                         @item.Remark
                     </td>
-                    <td>
-                        @item.CreateTime
+                    <td style="text-align: center;">
+                        @item.CreateTime.ToString("yyyy-MM-dd HH:mm:ss")
                     </td>
                     <td>
                         @item.CreateUser
@@ -106,8 +104,15 @@
         </table>
     </div>
     <!--表格结束-->
-
     <!--分页-->
-    @Html.Pager(Model.TotalCount, "pageSize".ValueOfQuery().TryInt(12).Value, "pageindex".ValueOfQuery().TryInt(1).Value, new PagerOptions() { PagerItemTemplate = "&nbsp;{0}" })
+    @{
+        var pagerModel = new Deployment.Web.Models.PageModel()
+        {
+            TotalCount = Model.TotalCount,
+            PageSize = "PageSize".ValueOfQuery().TryInt(10).Value,
+            PageIndex = "Pageindex".ValueOfQuery().TryInt(1).Value
+        };
+    }
+    @Html.Partial("/Views/Shared/PagerPartialView.cshtml", pagerModel)
 </body>
 </html>

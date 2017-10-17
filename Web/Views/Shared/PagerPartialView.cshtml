@@ -1,0 +1,14 @@
+﻿@using Webdiyer.WebControls.Mvc;
+
+@model Deployment.Web.Models.PageModel
+<div style="text-align: right; padding-right: 20px;">
+@Html.Pager(Model.TotalCount, Model.PageSize, Model.PageIndex, new PagerOptions()
+{
+    PagerItemTemplate = "&nbsp;{0}&nbsp;",
+    FirstPageText = "首页",
+    LastPageText = "尾页",
+    ShowPrevNext = false,
+    ShowNumericPagerItems = true,
+    CurrentPagerItemTemplate = " <span  style=\"color:blue;\">{0}</span>"
+})
+    </div>

@@ -1,5 +1,4 @@
-*.pdb;
-*.cashe;
-build/;
-bin/;
+*.pdb
+build/
+bin/
 *.cache

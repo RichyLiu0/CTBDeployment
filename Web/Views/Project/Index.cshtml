@@ -1,67 +1,113 @@
 ﻿@using Webdiyer.WebControls.Mvc;
 @using DeploymentDAO;
-@using Ucsmy.Framework.DAL;
-
 @model Ucsmy.Framework.PagerResponse<D_Project>
 
 
-@{
-    var PageIndex = "pageindex".ValueOfQuery().TryInt(1).Value;
-    var PageSize = "pageSize".ValueOfQuery().TryInt(10).Value;
-    
-}
-
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <title></title>
+    <link href="~/Styles/common.css" rel="stylesheet" />
+    <link href="~/Styles/bodyCss.css" rel="stylesheet" />
 
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/common.js"></script>
+    <script type="text/javascript" src="~/Scripts/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            InitSearch();
+            InitListOrderBy();
+        });
+    </script>
 </head>
 <body>
 
-    <table class="table table-striped table-bordered">
-        <tr>
-            <th class="nowrap">ID
-            </th>
-            <th class="nowrap">项目名称
-            </th>
-            <th class="nowrap">项目编号
-            </th>
-            <th class="nowrap">备注
-            </th>
-            <th class="nowrap">创建时间
-            </th>
-            <th class="nowrap">创建人
-            </th>
-
-        </tr>
-
-
-        @foreach (var item in Model.ResultList)
-        {
-
+    <!--搜索-->
+    <div class="search">
+        <!--搜索-->
+        <table>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProjectID)
+                <td class="std">ID</td>
+                <td class="ttd">
+                    <input search="ProjectID" type="text" style="width: 195px;" class="searchInput" rtip="ProjectID" />
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProjectName)
+                <td class="std">项目名称</td>
+                <td class="ttd">
+                    <input search="ProjectName" type="text" style="width: 195px;" class="searchInput" rtip="资产名称" />
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ProjectCode)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Remark)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreateTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreateUser)
+                <td class="std">项目编码</td>
+                <td class="ttd">
+                    <input search="ProjectCode" type="text" style="width: 195px;" class="searchInput" rtip="项目编码" />
                 </td>
             </tr>
-        }
-    </table>
-    @Html.Pager(Model.ResultList.Count, PageSize, PageIndex, new PagerOptions() { CssClass = "color:red;" })
+            <tr>
+                <td class="std">创建时间</td>
+                <td class="ttd">
+                    <input search="MinCreateTime" type="text" class="Wdate" onclick="WdatePicker()" style="width: 88px" />
+                    至
+                    <input search="MaxCreateTime" type="text" class="Wdate" onclick="WdatePicker()" style="width: 88px" />
+                </td>
+                <td>
+                    <span>
+                        <input type="hidden" id="IsDoQuery" search="IsDoQuery" />
+                        <input type="button" id="btnSearch" class="searchBtn" value="查询" onclick="DoSearch(1)" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--搜索结束-->
+
+    <!--表格-->
+    <div class="content">
+        <table border="0" cellpadding="0" cellspacing="0" class="tableBD">
+            <tbody>
+                <tr class="btTR" style="text-align: center">
+                    <th class="nowrap">ID
+                    </th>
+                    <th class="nowrap">项目名称
+                    </th>
+                    <th class="nowrap">项目编号
+                    </th>
+                    <th class="nowrap">备注
+                    </th>
+                    <th class="nowrap">创建时间
+                    </th>
+                    <th class="nowrap">创建人
+                    </th>
+                    <th align="center">操作</th>
+                </tr>
+            </tbody>
+            @foreach (var item in Model.ResultList)
+            {
+                <tr>
+                    <td>
+                        @item.ProjectID
+                    </td>
+                    <td>
+                        @item.ProjectName
+                    </td>
+                    <td>
+                        @item.ProjectCode
+                    </td>
+                    <td>
+                        @item.Remark
+                    </td>
+                    <td>
+                        @item.CreateTime
+                    </td>
+                    <td>
+                        @item.CreateUser
+                    </td>
+                    <td></td>
+                </tr>
+            }
+        </table>
+    </div>
+    <!--表格结束-->
+
+    <!--分页-->
+    @Html.Pager(Model.TotalCount, "pageSize".ValueOfQuery().TryInt(12).Value, "pageindex".ValueOfQuery().TryInt(1).Value, new PagerOptions() { PagerItemTemplate = "&nbsp;{0}" })
 </body>
 </html>

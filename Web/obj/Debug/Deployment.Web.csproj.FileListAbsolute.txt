@@ -55,6 +55,7 @@ C:\Users\rui\Documents\GitHub\CTBDeployment\Web\bin\zh-Hans\System.Web.WebPages.
 C:\Users\rui\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.csprojResolveAssemblyReference.cache
 C:\Users\rui\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.dll
 C:\Users\rui\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Deployment.Web.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Deployment.Web.pdb
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\Antlr3.Runtime.dll
@@ -109,6 +110,5 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\zh-Hans\System.Web.Razor.
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\zh-Hans\System.Web.WebPages.resources.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\obj\Debug\Deployment.Web.pdb

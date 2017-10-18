@@ -22,3 +22,6 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentModel
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\obj\Debug\DeploymentService.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\EntityFramework.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\EntityFramework.xml
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\zh-Hans\EntityFramework.resources.dll

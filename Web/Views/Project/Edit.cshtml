@@ -1,0 +1,76 @@
+﻿@model DeploymentDAO.D_Project
+
+
+@{
+    var action =ViewBag.Action;
+    }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    @Html.Partial("~/Views/Shared/CommonResourcePartialView.cshtml")
+
+    <script type="text/javascript">
+
+        function TrySubmit() {
+            if (!confirm("确认保存?")) {
+                return;
+            }
+            AppCall({
+                Action: "/Project/@(action)Submit",
+                FormTarget: "#form1",
+                CallBack: function (jr) {
+                    if (jr.IsSucess) {
+                        alert(jr.Message)
+                        window.parent.location = window.parent.location;
+                    }
+                    else {
+                        alert(jr.Message)
+                    }
+
+                }
+            });
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <input type="hidden" value="@Model.ProjectID" id="ProjectID" name="ProjectID"/>
+        <table border="0" align="center" cellpadding="0" cellspacing="0" class="table_1">
+            <tbody>
+                <tr>
+                    <th class="title_td">项目编号：
+                    </th>
+                    <td>
+                        <input type="text" name="ProjectCode" notempty="项目编号" maxlength="30" value="@Model.ProjectCode" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">项目名称：
+                    </th>
+                    <td>
+                        <input type="text" name="ProjectName" notempty="项目名称" maxlength="30" value="@Model.ProjectName" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">项目备注：
+                    </th>
+                    <td>
+                        <input type="text" name="Remark" notempty="项目备注" maxlength="250"  style="width:250px;" value="@Model.Remark" />
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="保 存" class="ButtonCss" onclick="TrySubmit();" />
+                    </td>
+                </tr>
+        </table>
+
+    </form>
+</body>
+</html>

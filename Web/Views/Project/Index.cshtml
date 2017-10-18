@@ -5,26 +5,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-    <link href="~/Styles/common.css" rel="stylesheet" />
-    <link href="~/Styles/bodyCss.css" rel="stylesheet" />
-
-
-    <script src="/Scripts/jquery-1.8.2.min.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/jquery-ui/jquery-ui.min.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/jquery-multiselect/jquery.multiselect.min.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/jquery-multiselect/jquery.multiselect.filter.min.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/json2.min.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/Jquery.Query.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/My97DatePicker/WdatePicker.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/jquery.divbox.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/jquery-loadmask-0.4/jquery.loadmask.min.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/DropDown.js?v=2017092902" type="text/javascript"> </script>
-    <script src="/Scripts/fixTable.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/layer/layer.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/layer/extend/layer.ext.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/common.js?v=2017092902" type="text/javascript"></script>
-    <script src="/Scripts/popupwhitename.js?v=2017092902" type="text/javascript"></script>
+    <title>项目管理</title>
+    @Html.Partial("~/Views/Shared/CommonResourcePartialView.cshtml")
 
     <script type="text/javascript">
         $(function () {
@@ -40,10 +22,7 @@
         <!--搜索-->
         <table>
             <tr>
-                <td class="std">ID</td>
-                <td class="ttd">
-                    <input search="ProjectID" type="text" style="width: 195px;" class="searchInput" rtip="ProjectID" />
-                </td>
+                
                 <td class="std">项目名称</td>
                 <td class="ttd">
                     <input search="ProjectName" type="text" style="width: 195px;" class="searchInput" rtip="资产名称" />
@@ -52,8 +31,7 @@
                 <td class="ttd">
                     <input search="ProjectCode" type="text" style="width: 195px;" class="searchInput" rtip="项目编码" />
                 </td>
-            </tr>
-            <tr>
+            
                 <td class="std">创建时间</td>
                 <td class="ttd">
                     <input search="MinCreateTime" type="text" class="Wdate" onclick="WdatePicker()" style="width: 88px" />
@@ -64,8 +42,7 @@
                     <span>
                         <input type="hidden" id="IsDoQuery" search="IsDoQuery" />
                         <input type="button" id="btnSearch" class="searchBtn" value="查询" onclick="DoSearch(1)" />
-
-                        <input type="button" class="ButtonCss" value="添加项目" onclick="javascript: RegGo('SaleChannelEdit.aspx?Action=Create');" />
+                        <input type="button" class="ButtonCss" value="添加项目" onclick="ShowWin('/Project/Create', 360, 240)" />
                     </span>
                 </td>
             </tr>
@@ -78,11 +55,9 @@
         <table border="0" cellpadding="0" cellspacing="0" class="tableBD">
             <tbody>
                 <tr class="btTR" style="text-align: center">
-                    <th class="nowrap" style="width: 150px;">ID
+                    <th class="nowrap">项目编号
                     </th>
                     <th class="nowrap">项目名称
-                    </th>
-                    <th class="nowrap">项目编号
                     </th>
                     <th class="nowrap">备注
                     </th>
@@ -97,14 +72,12 @@
             {
                 <tr>
                     <td>
-                        @item.ProjectID
+                        @item.ProjectCode
                     </td>
                     <td>
                         @item.ProjectName
                     </td>
-                    <td>
-                        @item.ProjectCode
-                    </td>
+
                     <td>
                         @item.Remark
                     </td>
@@ -114,7 +87,9 @@
                     <td>
                         @item.CreateUser
                     </td>
-                    <td></td>
+                    <td>
+                        <a class="aico" href="javascript:ShowWin('/Project/Edit?ProjectId=@item.ProjectID', 360, 240)"><span>编辑</span></a>
+                    </td>
                 </tr>
             }
         </table>
@@ -125,8 +100,8 @@
         var pagerModel = new Deployment.Web.Models.PageModel()
         {
             TotalCount = Model.TotalCount,
-            PageSize = "PageSize".ValueOfQuery().TryInt(10).Value,
-            PageIndex = "Pageindex".ValueOfQuery().TryInt(1).Value
+            PageSize = "pagesize".ValueOfQuery().TryInt(10).Value,
+            PageIndex = "pageindex".ValueOfQuery().TryInt(1).Value
         };
     }
     @Html.Partial("/Views/Shared/PagerPartialView.cshtml", pagerModel)

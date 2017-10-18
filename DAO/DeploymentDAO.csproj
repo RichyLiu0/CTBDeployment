@@ -78,6 +78,7 @@
     <Compile Include="ModelService\QueryService.cs" />
     <Compile Include="ModelService\UnitService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\DeploymentModel.csproj">

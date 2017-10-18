@@ -474,6 +474,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\Shared\PagerPartialView.cshtml" />
+    <Content Include="Views\Shared\CommonResourcePartialView.cshtml" />
+    <Content Include="Views\Project\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

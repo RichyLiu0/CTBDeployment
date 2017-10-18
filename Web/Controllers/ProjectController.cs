@@ -22,7 +22,7 @@ namespace Deployment.Web.Controllers
 
             var request = new Ucsmy.Framework.PageRequest<D_Project>()
                    {
-                       PageIndex = "pageindex".ValueOfQuery().TryInt(1),
+                       PageIndex = "pageindex".ValueOfQuery().TryInt(1) - 1,
                        PageSize = "pagesize".ValueOfQuery().TryInt(10),
                        OrderBy = t => t.OrderBy(to => to.CreateTime)
                    };

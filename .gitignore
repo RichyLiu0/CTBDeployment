@@ -1,5 +1,2 @@
-*.pdb
-build/
-bin/
-*.cache
-Debug/
+*.pdb,build/,bin/,*.cache,Debug/
+

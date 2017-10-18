@@ -51,7 +51,6 @@ namespace DeploymentService
             return rs;
         }
 
-
         public static ResponseResult Update(D_Project project)
         {
             var rs = new ResponseResult() { IsSucess = true };
@@ -93,5 +92,47 @@ namespace DeploymentService
 
             return rs;
         }
+
+        public static ResponseResult AddProjectCodeServer(D_ProjectCodeServer projectServer)
+        {
+            var rs = new ResponseResult() { IsSucess = true };
+
+
+            if (projectServer.ProjectID.IsNullOrEmpty())
+            {
+                rs.IsSucess = false;
+                rs.Message = "错误参数";
+                return rs;
+            }
+            if (projectServer.ServerIndex <= 0)
+            {
+                rs.IsSucess = false;
+                rs.Message = "服务器编号不能为空";
+                return rs;
+            }
+
+
+            //if (DeploymentDAO.QueryService.CTBDeployment.Exist<D_ProjectCodeServer>(t => t.ServerIndex == projectServer.ServerIndex && t.ProjectID==projectServer.ProjectID))
+            //{
+            //    rs.IsSucess = false;
+            //    rs.Message = "服务器编号已存在";
+            //    return rs;
+            //}
+
+
+
+            using (var uow = DeploymentDAO.UnitService.CTBDeployment)
+            {
+                uow.Create(projectServer);
+                uow.Commit();
+            }
+
+            rs.IsSucess = true;
+            rs.Message = "保存成功";
+
+            return rs;
+        }
+
+
     }
 }

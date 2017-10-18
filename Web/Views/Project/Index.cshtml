@@ -42,7 +42,7 @@
                     <span>
                         <input type="hidden" id="IsDoQuery" search="IsDoQuery" />
                         <input type="button" id="btnSearch" class="searchBtn" value="查询" onclick="DoSearch(1)" />
-                        <input type="button" class="ButtonCss" value="添加项目" onclick="ShowWin('/Project/Create', 360, 240)" />
+                        <input type="button" class="ButtonCss" value="添加项目" onclick="ShowWin('/Project/Create', 360, 240,'添加')" />
                     </span>
                 </td>
             </tr>
@@ -88,7 +88,9 @@
                         @item.CreateUser
                     </td>
                     <td>
-                        <a class="aico" href="javascript:ShowWin('/Project/Edit?ProjectId=@item.ProjectID', 360, 240)"><span>编辑</span></a>
+                        <a class="aico" href="javascript:ShowWin('/Project/Edit?ProjectId=@item.ProjectID', 360, 240,'编辑')"><span>编辑</span></a>
+                          &nbsp;&nbsp;
+                          <a class="aico" href="javascript:ShowWin('/ProjectCodeServer?ProjectId=@item.ProjectID', 860, 540,'代码服务管理')"><span>代码服务管理</span></a>
                     </td>
                 </tr>
             }

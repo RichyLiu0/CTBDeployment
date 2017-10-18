@@ -14,7 +14,7 @@ namespace DeploymentDAO
     
     public partial class D_SqlServer
     {
-        public string SqlServerID { get; set; }
+        public string ServerID { get; set; }
         public string ProjectID { get; set; }
         public string ConnectionStr { get; set; }
         public System.DateTime CreateTime { get; set; }

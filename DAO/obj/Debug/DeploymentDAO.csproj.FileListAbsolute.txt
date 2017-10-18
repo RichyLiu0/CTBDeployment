@@ -15,12 +15,12 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\DeploymentDAO.dll.c
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\DeploymentDAO.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\DeploymentDAO.pdb
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\DeploymentModel.dll
-C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\EntityFramework.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\Ucsmy.Framework.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\LitJson.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\DeploymentModel.pdb
-C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\EntityFramework.xml
-C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\zh-Hans\EntityFramework.resources.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\obj\Debug\DeploymentDAO.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\obj\Debug\DeploymentDAO.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\obj\Debug\DeploymentDAO.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\EntityFramework.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\EntityFramework.xml
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\zh-Hans\EntityFramework.resources.dll

@@ -14,12 +14,13 @@ namespace DeploymentDAO
     
     public partial class D_ProjectCodeServer
     {
-        public string CodeServerID { get; set; }
+        public string ServerID { get; set; }
         public int ServerIndex { get; set; }
+        public int DeploymentType { get; set; }
         public string ProjectID { get; set; }
         public string Path { get; set; }
-        public string LoginUser { get; set; }
-        public string LoginPwd { get; set; }
+        public string FtpLoginUser { get; set; }
+        public string FtpLoginPwd { get; set; }
         public string Remark { get; set; }
         public System.DateTime CreateTime { get; set; }
         public string CreateUser { get; set; }

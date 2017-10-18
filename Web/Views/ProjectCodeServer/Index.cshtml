@@ -1,0 +1,112 @@
+﻿@using DeploymentDAO;
+@model Ucsmy.Framework.PagerResponse<D_ProjectCodeServer>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>代码服务器管理</title>
+    @Html.Partial("~/Views/Shared/CommonResourcePartialView.cshtml")
+
+    <script type="text/javascript">
+        $(function () {
+            InitSearch();
+            InitListOrderBy();
+        });
+    </script>
+</head>
+<body>
+
+    <!--搜索-->
+    <div class="search">
+        <!--搜索-->
+        <table>
+            <tr>
+
+                <td class="std">服务器编号</td>
+                <td class="ttd">
+                    
+                     <input search="ProjectId" type="hidden"  value="@("ProjectId".ValueOfQuery())" class="searchInput"/>
+                    <input search="ServerIndex" type="text" style="width: 195px;" class="searchInput" rtip="服务器编号" />
+                </td>
+                <td class="std">服务器类型</td>
+                <td class="ttd">
+                    <input search="DeploymentType" type="text" style="width: 195px;" class="searchInput" rtip="服务器类型" />
+                </td>
+
+                <td>
+                    <span>
+                        <input type="hidden" id="IsDoQuery" search="IsDoQuery" />
+                        <input type="button" id="btnSearch" class="searchBtn" value="查询" onclick="DoSearch(1)" />
+                        <input type="button" class="ButtonCss" value="添加服务器" onclick="ShowWin('/ProjectCodeServer/Create?ProjectID=@("ProjectID".ValueOfQuery())    ',  420, 340,'添加')" />
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--搜索结束-->
+
+    <!--表格-->
+    <div class="content">
+        <table border="0" cellpadding="0" cellspacing="0" class="tableBD">
+            <tbody>
+                <tr class="btTR" style="text-align: center">
+
+                    <th>服务器号</th>
+                    <th>部署类型</th>
+                    <th>地址</th>
+                    <th>备注</th>
+                    <th>创建时间</th>
+                    <th>创建人</th>
+
+                </tr>
+            </tbody>
+            @foreach (var item in Model.ResultList)
+            {
+                <tr>
+
+
+                    <td align="left">@item.ServerIndex
+                    </td>
+
+
+                    <td align="left">@item.DeploymentType
+                    </td>
+
+
+                    <td align="left">@item.Path
+                    </td>
+
+
+                    <td align="left">@item.Remark
+                    </td>
+
+
+                    <td align="left">@item.CreateTime.ToString("yyyy-MM-dd HH:mm:ss")
+                    </td>
+
+
+                    <td align="left">@item.CreateUser
+                    </td>
+
+                    <td>
+                        <a class="aico" href="javascript:ShowWin('/ProjectCodeServer/Edit?ServerID=@item.ServerID', 420, 340,'编辑')"><span>编辑</span></a>
+                       
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+    <!--表格结束-->
+    <!--分页-->
+    @{
+        var pagerModel = new Deployment.Web.Models.PageModel()
+        {
+            TotalCount = Model.TotalCount,
+            PageSize = "pagesize".ValueOfQuery().TryInt(10).Value,
+            PageIndex = "pageindex".ValueOfQuery().TryInt(1).Value
+        };
+    }
+    @Html.Partial("/Views/Shared/PagerPartialView.cshtml", pagerModel)
+</body>
+</html>

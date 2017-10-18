@@ -19,14 +19,15 @@
   </EntityType>
   <EntityType Name="D_ProjectCodeServer">
     <Key>
-      <PropertyRef Name="CodeServerID" />
+      <PropertyRef Name="ServerID" />
     </Key>
-    <Property Name="CodeServerID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ServerID" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="ServerIndex" Type="int" Nullable="false" />
-    <Property Name="ProjectID" Type="nchar" Nullable="false" MaxLength="10" />
-    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="250" />
-    <Property Name="LoginUser" Type="nvarchar" MaxLength="150" />
-    <Property Name="LoginPwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeploymentType" Type="int" Nullable="false" />
+    <Property Name="ProjectID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Path" Type="nvarchar" MaxLength="250" />
+    <Property Name="FtpLoginUser" Type="nvarchar" MaxLength="150" />
+    <Property Name="FtpLoginPwd" Type="nvarchar" MaxLength="50" />
     <Property Name="Remark" Type="nvarchar" MaxLength="250" />
     <Property Name="CreateTime" Type="datetime" Nullable="false" />
     <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
@@ -46,9 +47,9 @@
   </EntityType>
   <EntityType Name="D_SqlServer">
     <Key>
-      <PropertyRef Name="SqlServerID" />
+      <PropertyRef Name="ServerID" />
     </Key>
-    <Property Name="SqlServerID" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ServerID" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="ConnectionStr" Type="nvarchar" Nullable="false" MaxLength="150" />
     <Property Name="CreateTime" Type="datetime" Nullable="false" />

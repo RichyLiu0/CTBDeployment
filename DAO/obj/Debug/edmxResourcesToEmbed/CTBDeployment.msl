@@ -21,12 +21,13 @@
           <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
           <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
           <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="LoginPwd" ColumnName="LoginPwd" />
-          <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+          <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
+          <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
           <ScalarProperty Name="Path" ColumnName="Path" />
           <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
           <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
-          <ScalarProperty Name="CodeServerID" ColumnName="CodeServerID" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -51,7 +52,7 @@
           <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
           <ScalarProperty Name="ConnectionStr" ColumnName="ConnectionStr" />
           <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-          <ScalarProperty Name="SqlServerID" ColumnName="SqlServerID" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

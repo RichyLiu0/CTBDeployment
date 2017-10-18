@@ -1,0 +1,101 @@
+﻿@model DeploymentDAO.D_ProjectCodeServer
+
+
+@{
+    var action = ViewBag.Action;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    @Html.Partial("~/Views/Shared/CommonResourcePartialView.cshtml")
+
+    <script type="text/javascript">
+
+        function TrySubmit() {
+            if (!confirm("确认保存?")) {
+                return;
+            }
+            AppCall({
+                Action: "/ProjectCodeServer/@(action)Submit",
+                FormTarget: "#form1",
+                CallBack: function (jr) {
+                    if (jr.IsSucess) {
+                        alert(jr.Message)
+                        window.parent.location = window.parent.location;
+                    }
+                    else {
+                        alert(jr.Message)
+                    }
+                }
+            });
+        }
+
+
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <input type="hidden" value="@Model.ServerID" id="ServerID" name="ServerID"/>
+        <input type="hidden" value="@Model.ProjectID" id="ProjectID" name="ProjectID"/>
+        <table border="0" align="center" cellpadding="0" cellspacing="0" class="table_1">
+            <tbody>
+                <tr>
+                    <th class="title_td">服务器编号：
+                    </th>
+                    <td>
+                        <input type="text" name="ServerIndex" notempty="项目编号" maxlength="30" value="@Model.ServerIndex" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">部署方式：
+                    </th>
+                    <td>
+                        <select name="DeploymentType" notempty="部署方式">
+                            <option value="10" @(Html.Raw(Model.DeploymentType == 10 ? "selected=\"selected\"" : ""))>文件路径部署</option>
+                            <option value="20" @(Html.Raw(Model.DeploymentType == 20 ? "selected=\"selected\"" : "")) >服务部署</option>
+                            <option value="30"@(Html.Raw(Model.DeploymentType == 30 ? "selected=\"selected\"" : "")) >Ftp部署</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">部署路径：
+                    </th>
+                    <td>
+                        <input type="text" name="Path" notempty="部署路径"  maxlength="250"  style="width:250px;" value="@Model.Path" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <th class="title_td">Ftp用户：
+                    </th>
+                    <td>
+                        <input type="text" name="FtpLoginUser" notempty="ftp用户" maxlength="250"   value="@Model.FtpLoginUser" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">Ftp密码：
+                    </th>
+                    <td>
+                        <input type="text" name="FtpLoginPwd" notempty="备注" maxlength="250"   value="@Model.FtpLoginPwd" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">备注：
+                    </th>
+                    <td>
+                        <input type="text" name="Remark" notempty="备注" maxlength="250"  style="width:250px;" value="@Model.Remark" />
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="保 存" class="ButtonCss" onclick="TrySubmit();" />
+                    </td>
+                </tr>
+        </table>
+
+    </form>
+</body>
+</html>

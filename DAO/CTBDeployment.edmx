@@ -24,14 +24,15 @@
         </EntityType>
         <EntityType Name="D_ProjectCodeServer">
           <Key>
-            <PropertyRef Name="CodeServerID" />
+            <PropertyRef Name="ServerID" />
           </Key>
-          <Property Name="CodeServerID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ServerID" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="ServerIndex" Type="int" Nullable="false" />
-          <Property Name="ProjectID" Type="nchar" Nullable="false" MaxLength="10" />
-          <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="250" />
-          <Property Name="LoginUser" Type="nvarchar" MaxLength="150" />
-          <Property Name="LoginPwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="DeploymentType" Type="int" Nullable="false" />
+          <Property Name="ProjectID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Path" Type="nvarchar" MaxLength="250" />
+          <Property Name="FtpLoginUser" Type="nvarchar" MaxLength="150" />
+          <Property Name="FtpLoginPwd" Type="nvarchar" MaxLength="50" />
           <Property Name="Remark" Type="nvarchar" MaxLength="250" />
           <Property Name="CreateTime" Type="datetime" Nullable="false" />
           <Property Name="CreateUser" Type="nvarchar" Nullable="false" MaxLength="50" />
@@ -51,9 +52,9 @@
         </EntityType>
         <EntityType Name="D_SqlServer">
           <Key>
-            <PropertyRef Name="SqlServerID" />
+            <PropertyRef Name="ServerID" />
           </Key>
-          <Property Name="SqlServerID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ServerID" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="ProjectID" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="ConnectionStr" Type="nvarchar" Nullable="false" MaxLength="150" />
           <Property Name="CreateTime" Type="datetime" Nullable="false" />
@@ -82,14 +83,15 @@
         </EntityType>
         <EntityType Name="D_ProjectCodeServer">
           <Key>
-            <PropertyRef Name="CodeServerID" />
+            <PropertyRef Name="ServerID" />
           </Key>
-          <Property Type="String" Name="CodeServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="ServerIndex" Nullable="false" />
-          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="Path" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="LoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="LoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DeploymentType" Nullable="false" />
+          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Path" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
           <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -109,9 +111,9 @@
         </EntityType>
         <EntityType Name="D_SqlServer">
           <Key>
-            <PropertyRef Name="SqlServerID" />
+            <PropertyRef Name="ServerID" />
           </Key>
-          <Property Type="String" Name="SqlServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="ConnectionStr" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
@@ -143,12 +145,13 @@
                 <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="LoginPwd" ColumnName="LoginPwd" />
-                <ScalarProperty Name="LoginUser" ColumnName="LoginUser" />
+                <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
+                <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
                 <ScalarProperty Name="Path" ColumnName="Path" />
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
                 <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
-                <ScalarProperty Name="CodeServerID" ColumnName="CodeServerID" />
+                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -173,7 +176,7 @@
                 <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
                 <ScalarProperty Name="ConnectionStr" ColumnName="ConnectionStr" />
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-                <ScalarProperty Name="SqlServerID" ColumnName="SqlServerID" />
+                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

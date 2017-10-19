@@ -6,3 +6,5 @@ Debug/
 *.dll
 *.cache
 *.Config
+*.pdb
+*.pdb

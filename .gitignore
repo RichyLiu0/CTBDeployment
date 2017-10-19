@@ -3,8 +3,11 @@ build/
 bin/
 *.cache
 Debug/
+obj/
 *.dll
 *.cache
 *.Config
 *.pdb
 *.pdb
+*.cache
+DAO/obj/Debug/DeploymentDAO.csprojResolveAssemblyReference.cache

@@ -11,16 +11,16 @@
 .infoBox .bt .more{float:right;height:28px;line-height:28px;font-weight:400;padding-right:20px;}
 .infoBox .content{padding:4px;overflow:hidden}
 .infoBox .nR{float:left}
-.infoBox .con_2{background:url(../images/fh_1.gif) left center no-repeat;padding-left:40px;margin-top:30px;margin-left:30px;}
-.infoBox .con_3{background:url(../images/fh_2.gif) left center no-repeat;padding-left:40px;margin-top:30px;margin-left:30px;}
+.infoBox .con_2{background:url(/images/fh_1.gif) left center no-repeat;padding-left:40px;margin-top:30px;margin-left:30px;}
+.infoBox .con_3{background:url(/images/fh_2.gif) left center no-repeat;padding-left:40px;margin-top:30px;margin-left:30px;}
 .gl_list{width:100%;*width:95%;}
 .gl_list .gl_item{text-align:center}
 .gl_list .gl_item a:hover{text-decoration:underline}
 .c{clear:both}
 .left_content{padding:10px}
 .dengJi{background:#E1F0FA;border:1px solid #A9D2ED;height:35px;line-height:35px;padding:10px;position:relative;margin-bottom:10px;}
-.dengJi .btn_dj{position:absolute;right:10px;top:11px;background:url(../images/btn_dj.gif) left bottom no-repeat;width:114px;height:34px;}
-.dengJi .btn_dj:hover{background:url(../images/btn_dj.gif) 1px 1px no-repeat;}
+.dengJi .btn_dj{position:absolute;right:10px;top:11px;background:url(/images/btn_dj.gif) left bottom no-repeat;width:114px;height:34px;}
+.dengJi .btn_dj:hover{background:url(/images/btn_dj.gif) 1px 1px no-repeat;}
 
 /*底部*/
 .bottom{position:absolute;left:0;bottom:0;height:38px;line-height:38px;border-top:2px solid #0A6BC3;width:100%;text-align:center}
@@ -32,7 +32,7 @@
 .top{height:80px;position:relative;width:100%;}
 .top .logo{height: 50px;left: 20px;overflow: hidden;position: absolute;top: 15px;}
 .topBotton{position:absolute;right:0;top:15px;width:350px;}
-.pageMenu{background:#F5F5F5 url(../images/bottomLeft_logo.gif) left bottom no-repeat;}
+.pageMenu{background:#F5F5F5 url(/images/bottomLeft_logo.gif) left bottom no-repeat;}
 .pageMenu-2{background:#D9EAFF}
 .topInfo{position:absolute;right:20px;bottom:6px;color:#000;}
 .exit{position:absolute;right:28px;top:10px;color:#ccc}
@@ -42,24 +42,24 @@
 .topLine{height:0;overflow:hidden;}
 
 /*左侧菜单*/
-.leftSidebar{position:absolute;bottom:0;top:0;left:0;width:210px;*height:expression(document.body.offsetHeight  + 'px');background:#F7FAFC url(../images/left_bg.gif) right top repeat-y;*position:inherit;}
-.leftSidebar h3{height:35px;line-height:35px;background:url("../images/top_menu_bg.gif") repeat-x 0 0}
+.leftSidebar{position:absolute;bottom:0;top:0;left:0;width:210px;*height:expression(document.body.offsetHeight  + 'px');background:#F7FAFC url(/images/left_bg.gif) right top repeat-y;*position:inherit;}
+.leftSidebar h3{height:35px;line-height:35px;background:url("/images/top_menu_bg.gif") repeat-x 0 0}
 .navBg{position:absolute;bottom:0;top:36px;left:0;overflow:auto;*height:expression(document.body.offsetHeight  + 'px');width:210px;*position:inherit;}
 .leftSidebar h3 span{color:#FFF;font-size:12px;font-weight:400;padding:0 5px;}
-.leftSidebar h3 .timer{padding-left:20px;background:url(../images/clock.gif) 5px center no-repeat}
-.navBg h2{padding:20px 0;text-align:center;color:#000;font-size:14px;background:url(../images/xx_4.gif) left center repeat-x}
+.leftSidebar h3 .timer{padding-left:20px;background:url(/images/clock.gif) 5px center no-repeat}
+.navBg h2{padding:20px 0;text-align:center;color:#000;font-size:14px;background:url(/images/xx_4.gif) left center repeat-x}
 .navBg h2 span{padding:0 10px;background:#F7FAFC}
 .leftNav{overflow:hidden;}
 .leftNav li{line-height:33px;display:block;*border-top:1px solid #F7FAFC;margin-bottom:5px;font-weight:700;}
 .leftNav .yj{}
-.leftNav .yj a{display:block;height:28px;padding-left:20px;background:url(../images/left_button_bg.gif) center 0 no-repeat;}
+.leftNav .yj a{display:block;height:28px;padding-left:20px;background:url(/images/left_button_bg.gif) center 0 no-repeat;}
 .leftNav .yj a:hover,.leftNav .yj .current{color:#FFF;background-position:center bottom}
 .leftNav li a{color:#FFF;padding-left:5px;outline:none;blr:expression(this.onFocus=this.blur());}
 .leftNav li a:hover{color:#F00;}
 .leftNav .two{padding:10px 0;}
-.leftNav .two li{background:url(../images/left_bg_2.gif) left bottom no-repeat;border:none;display:block;line-height:23px;padding:0 10px;}
-.leftNav .two li a{height:30px;line-height:30px;border:0px;font-weight:400;display:block;padding-left:25px; cursor:pointer;background:url(../images/jt_1.gif) 15px 0 no-repeat;color:#333}
-.leftNav .two li a:hover{color:#FFF;text-decoration:none;background:#A2D317 url(../images/jt_1.gif) 15px bottom no-repeat;}
+.leftNav .two li{background:url(/images/left_bg_2.gif) left bottom no-repeat;border:none;display:block;line-height:23px;padding:0 10px;}
+.leftNav .two li a{height:30px;line-height:30px;border:0px;font-weight:400;display:block;padding-left:25px; cursor:pointer;background:url(/images/jt_1.gif) 15px 0 no-repeat;color:#333}
+.leftNav .two li a:hover{color:#FFF;text-decoration:none;background:#A2D317 url(/images/jt_1.gif) 15px bottom no-repeat;}
 .leftNav .two li a span{height:30px;line-height:30px;display:block}
 .leftNav .two .first{}
 .leftNav .two .first a span{}
@@ -77,28 +77,28 @@
 	overflow:hidden;
 	height:auto;
 *height:expression(document.body.offsetHeight  + 'px');/**position:inherit;这句的作用解决在IE7里面不显示问题，inherit继承*/}
-.rightSidebar h2.title{background:url(../images/right_title_bg_1.gif) 0 0 repeat-x;height:30px;line-height:30px;font-size:14px;color:#15428B;text-indent:2em;border-bottom:1px solid #6893CF;z-index:6;overflow:hidden}
+.rightSidebar h2.title{background:url(/images/right_title_bg_1.gif) 0 0 repeat-x;height:30px;line-height:30px;font-size:14px;color:#15428B;text-indent:2em;border-bottom:1px solid #6893CF;z-index:6;overflow:hidden}
 .rightSidebar .bt{font-size:15px;height:24px;padding-left:10px;}
 .rightSidebar .bt a{float:right;height:30px;line-height:30px;padding-left:25px;margin-right:10px;font-size:14px;font-weight:400;}
-.rightSidebar .bt .back{background:url(../images/back.gif) left center no-repeat;}
+.rightSidebar .bt .back{background:url(/images/back.gif) left center no-repeat;}
 
 
 .inner_2{background:#FFF;height:100%;overflow:auto;_overflow-y:auto;_overflow-x:hidden;*height:expression(document.body.offsetHeight + 'px');width:100%;*position:inherit}
-.ButtonCss{height:22px;padding:0 5px;*padding:0 3px;text-align:center;font-size:12px;border:1px solid #4795EC;background:url(../images/right_title_bg_1.gif) 0 0 repeat-x;cursor:pointer;color:#000;}
-.ButtonCss:hover{background:url(../images/right_title_bg_1.gif) left bottom repeat-x;border:1px solid #47C6EC;}
+.ButtonCss{height:22px;padding:0 5px;*padding:0 3px;text-align:center;font-size:12px;border:1px solid #4795EC;background:url(/images/right_title_bg_1.gif) 0 0 repeat-x;cursor:pointer;color:#000;}
+.ButtonCss:hover{background:url(/images/right_title_bg_1.gif) left bottom repeat-x;border:1px solid #47C6EC;}
 .ButtonCss:hover{color:#F00;}
-.ButtonCss2{height:20px;padding:0 5px;*padding:0 3px;text-align:center;font-size:12px;border:1px solid #BCBCBC;background:url(../images/right_title_bg_2.gif) 100% 0 repeat-x;cursor:pointer;color:#000;}
+.ButtonCss2{height:20px;padding:0 5px;*padding:0 3px;text-align:center;font-size:12px;border:1px solid #BCBCBC;background:url(/images/right_title_bg_2.gif) 100% 0 repeat-x;cursor:pointer;color:#000;}
 .btnBox{height:25px;line-height:25px;padding:6px 20px;}
 .btnBox a{height:25px;line-height:25px;float:right;padding-left:20px;margin-left:15px;cursor:pointer}
-.btnBox .del{background:url(../images/del.gif) left center no-repeat;}
-.btnBox .add{background:url(../images/add.gif) left center no-repeat;}
-.btnBox .export{background:url(../images/export.gif) left center no-repeat;}
+.btnBox .del{background:url(/images/del.gif) left center no-repeat;}
+.btnBox .add{background:url(/images/add.gif) left center no-repeat;}
+.btnBox .export{background:url(/images/export.gif) left center no-repeat;}
 
 
 /*搜索*/
 .search{background:#F7FAFC;line-height:30px;color:#666;padding:5px 15px}
 .search input,.search select{display:inline-block;vertical-align: middle;_margin-top:4px;}
-.searchBtn{width:63px;height:22px;line-height:22px;background:url(../images/search_btn.gif) 0 0 repeat-x;border:0px solid #6C92AD;;border:1px solid #6C92AD; text-size:13px;cursor:pointer;color:#000}
+.searchBtn{width:63px;height:22px;line-height:22px;background:url(/images/search_btn.gif) 0 0 repeat-x;border:0px solid #6C92AD;;border:1px solid #6C92AD; text-size:13px;cursor:pointer;color:#000}
 .searchInput{height:20px;line-height:20px;border:1px solid #ccc}
 
 .pageBody{position:absolute !important;top:40px !important;bottom:0 !important;right:0 !important;left:20px  !important;height:auto !important; _float:right;_padding-left:10px;_margin-top:0;_position:inherit;}
@@ -108,22 +108,22 @@
 /*标签*/
 .labelBox {
 }
-.Toggle_1{height:35px;background:url(../images/top_menu_bg.gif) 0 0 repeat-x;}
+.Toggle_1{height:35px;background:url(/images/top_menu_bg.gif) 0 0 repeat-x;}
 .Toggle_1 ul{padding-left:10px;height:35px;}
 .Toggle_1 li {
 	float:left;
 	height:35px;
-	background:url(../images/top_menu_bg_2.gif) left bottom no-repeat;
+	background:url(/images/top_menu_bg_2.gif) left bottom no-repeat;
 	padding-left:7px;
 	position:relative;
 	margin-left:4px;
 }
-.Toggle_1 li .btnClose{position:absolute;right:2px;bottom:15px;width:13px;height:13px;background:url(../images/close_btn.gif) 0 0 no-repeat}
+.Toggle_1 li .btnClose{position:absolute;right:2px;bottom:15px;width:13px;height:13px;background:url(/images/close_btn.gif) 0 0 no-repeat}
 .Toggle_1 li .btnClose:hover{background-position:right bottom;}
 .Toggle_1 li span {
 	padding-left: 8px;
 	padding-right:35px;
-	background:url(../images/top_menu_bg_1.gif) right bottom no-repeat;
+	background:url(/images/top_menu_bg_1.gif) right bottom no-repeat;
 	text-decoration: none;
 	color:#FFF;
 	float:left;
@@ -134,13 +134,13 @@
 	min-width:50px;
 }
 .Toggle_1 li.current{
-	background:url(../images/top_menu_bg_4.gif) left bottom no-repeat;
+	background:url(/images/top_menu_bg_4.gif) left bottom no-repeat;
 	border-bottom:1px solid #FFF;
 }
-.Toggle_1 li.current .btnClose{position:absolute;right:2px;bottom:15px;width:13px;height:13px;background:url(../images/close_btn.gif) 0 0 no-repeat}
+.Toggle_1 li.current .btnClose{position:absolute;right:2px;bottom:15px;width:13px;height:13px;background:url(/images/close_btn.gif) 0 0 no-repeat}
 .Toggle_1 li.current .btnClose:hover{background-position:right bottom;}
 .Toggle_1 li.current span{
-	background:url(../images/top_menu_bg_3.gif) right bottom no-repeat;
+	background:url(/images/top_menu_bg_3.gif) right bottom no-repeat;
 	color:#000;
 	font-weight:700;
 	line-height:45px;
@@ -170,14 +170,14 @@
 .treeNav {margin:0 0 10px 10px;overflow:hidden;background:#f8f8f8;border:1px solid #ccc;}
 .treeNav li {line-height:25px;background-image:0 24px;}
 .treeNav .rem {padding-left:15px;}
-.treeNav .add {background:url(../images/jj2.gif) -4px -31px no-repeat;}
-.treeNav .ren {background:url(../images/jj2.gif) -4px -7px no-repeat;}
+.treeNav .add {background:url(/images/jj2.gif) -4px -31px no-repeat;}
+.treeNav .ren {background:url(/images/jj2.gif) -4px -7px no-repeat;}
 .treeNav li a {color:#333;padding-left:5px;outline:none;blr:expression(this.onFocus=this.blur());}
 .treeNav li input {vertical-align:middle;margin-left:5px;}
-.treeNav .two {display:none;background:url(../images/joinXX.gif) 2px 0 repeat-y;}
-.treeNav .two li{padding-left:15px;background: url(../images/xx_2.gif) 9px 3px no-repeat;_background: url(../images/xx_2.gif) 9px -2px no-repeat;}
+.treeNav .two {display:none;background:url(/images/joinXX.gif) 2px 0 repeat-y;}
+.treeNav .two li{padding-left:15px;background: url(/images/xx_2.gif) 9px 3px no-repeat;_background: url(/images/xx_2.gif) 9px -2px no-repeat;}
 .treeNav .two li.first{}
-.treeNav .two li.end{background:url(../images/xx_3.gif) 9px 13px no-repeat;_background:url(../images/xx_3.gif) 9px 8px no-repeat;}
+.treeNav .two li.end{background:url(/images/xx_3.gif) 9px 13px no-repeat;_background:url(/images/xx_3.gif) 9px 8px no-repeat;}
 
 
 
@@ -185,25 +185,25 @@
 .welcome_box{font-size:13px;width: auto;height:90%; margin:15px;padding:8px;background:#EBF9FD;border:1px solid #4BABE7;}
 .welcome_box .red{color:#F00}
 .welcome_box .hui{color:#666}
-.set_title{height:40px;margin-top:10px;background:url(../images/title_bg_7.gif) 0 -40px repeat-x }
-.set_title .header{float:left;height:40px;line-height:40px;padding-left:40px;background:url(../images/title_bg_7.gif) 0 0 no-repeat}
-.set_title .end{float:right;height:40px;width:108px;line-height:40px;background:url(../images/title_bg_7.gif) 0 -80px no-repeat}
+.set_title{height:40px;margin-top:10px;background:url(/images/title_bg_7.gif) 0 -40px repeat-x }
+.set_title .header{float:left;height:40px;line-height:40px;padding-left:40px;background:url(/images/title_bg_7.gif) 0 0 no-repeat}
+.set_title .end{float:right;height:40px;width:108px;line-height:40px;background:url(/images/title_bg_7.gif) 0 -80px no-repeat}
 
 .logbg{width:1280px;margin:0 auto; position:relative;color:#fff; font-family:"宋体";}
-.logboxbg{background:url(../images/boxbg_03.png) no-repeat;width:612px;height:361px; position:absolute; top:180px;left:25%; padding:10px 0 0 12px;}
+.logboxbg{background:url(/images/boxbg_03.png) no-repeat;width:612px;height:361px; position:absolute; top:180px;left:25%; padding:10px 0 0 12px;}
 .yqtlogo{ margin-bottom:10px; }
 .jstext{color:#8d0000; margin-left:160px;height:24px;}
 .logname{ margin:0 0 15px 160px;}
 .logname input{height:24px;border:solid 1px #269bda;color:#555; text-indent:3px; }
 .yzm{width:143px;float:left;}
 .loganiu{ clear:both;margin:0 0 0 210px;}
-.loganiu input{ background:url(../images/yzm_07.png) no-repeat;border:none;width:78px;height:33px; line-height:33px;font-size:14px; font-weight:bold;color:#005b94;cursor:pointer}
+.loganiu input{ background:url(/images/yzm_07.png) no-repeat;border:none;width:78px;height:33px; line-height:33px;font-size:14px; font-weight:bold;color:#005b94;cursor:pointer}
 
 
 /*资产与资金预算日历*/
 .calendar-box{margin:30px;}
 .calendar-box h1{font-size:14px;color:#000;background:#e4e4e4;height:45px;line-height:45px;font-weight:400;margin:0 0 26px 0;}
-.calendar-box i.i1{width:28px;height:28px;display:block;float:left;background:url(../images/icon_01.png) no-repeat;margin:9px 16px 0 8px;}
+.calendar-box i.i1{width:28px;height:28px;display:block;float:left;background:url(/images/icon_01.png) no-repeat;margin:9px 16px 0 8px;}
 .calendar-date-select{font-size:14px;margin:0 0 26px 0; position:relative;padding:0 0 0 240px;}
 .calendar-date-select span{font-size:18px;color:#666;}
 .calendar-date-select select{width:116px;height:22px;line-height:22px;margin:0 20px 0 8px;}
@@ -214,7 +214,7 @@
 .calendar-date-select ul li i{width:15px;height:15px; display:block;float:left;margin:3px 8px 0 0;}
 .calendar-date-select ul li i.i2{background:#ff5917;}
 .calendar-date-select ul li i.i3{background:#f2bc94;}
-.calendar-date-select ul li i.i4{background:url(../images/icon_04.png) no-repeat;}
+.calendar-date-select ul li i.i4{background:url(/images/icon_04.png) no-repeat;}
 .calendar-date-box{}
 .calendar-date-btn{position:absolute;left:0;top:-3px;}
 .calendar-date-btn input[type="button"]{width:84px;height:35px;line-height:30px;background:#fff;border:solid 1px #bcbcbc;color:#000;font-size:16px;}
@@ -222,9 +222,9 @@
 
 .calendar-date-box h3{text-align:center;color:#fff;font-size:24px;background:#ff5917;font-weight:400;height:64px;line-height:64px; position:relative;width:99.4%;}
 .calendar-date-box a{width:64px;height:64px; display:block;background:#f6d7b8; position:absolute;}
-.calendar-date-box a.arrow-left{left:0;top:0;background:url(../images/arrow_left.png) no-repeat;}
+.calendar-date-box a.arrow-left{left:0;top:0;background:url(/images/arrow_left.png) no-repeat;}
 .calendar-date-box a.arrow-left:hover{background-position:right top;}
-.calendar-date-box a.arrow-right{right:0;top:0;background:url(../images/arrow_right.png) no-repeat;}
+.calendar-date-box a.arrow-right{right:0;top:0;background:url(/images/arrow_right.png) no-repeat;}
 .calendar-date-box a.arrow-right:hover{background-position:right top;}
 
 .calendar-date-week{}
@@ -247,7 +247,7 @@
 .calendar-date-list ul li .calendar-date-money p strong{background:#ff5917;height:100%; display:block; position:absolute;left:0;bottom:0;width:100%;border-radius:2px 2px 0 0;}
 .calendar-date-list ul li .calendar-date-money p strong b{display:block;background:#f9f1e9;width:100%;border-radius:2px 2px 0 0; position:relative;}
 .calendar-date-list ul li .calendar-date-money p strong b span.money-label{background:#fffaf1;border:solid 1px #e7c79c;font-size:12px;color:#d37c00; position:absolute;right:115%;bottom:-7px;height:14px;line-height:14px;border-radius:2px;font-weight:400;padding:0 2px;}
-.calendar-date-list ul li .calendar-date-money p strong b span.money-label i{background:url(../images/icon_02.png) no-repeat;width:4px;height:7px; display:block; position:absolute;right:-4px;top:3px;}
+.calendar-date-list ul li .calendar-date-money p strong b span.money-label i{background:url(/images/icon_02.png) no-repeat;width:4px;height:7px; display:block; position:absolute;right:-4px;top:3px;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-money p,.calendar-date-list ul li.current .calendar-date-list-bg .calendar-date-money p{border:solid 1px #ffdbcd;border-radius:2px 2px 0 0;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-money p strong,.calendar-date-list ul li.current .calendar-date-list-bg .calendar-date-money p strong{background:#f9f1e9;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-money p span,.calendar-date-list ul li.current .calendar-date-list-bg .calendar-date-money p span{color:#fff;}
@@ -259,7 +259,7 @@
 .calendar-date-list ul li .calendar-date-money2 p strong{background:#f2bc94;height:100%; display:block; position:absolute;left:0;bottom:0;width:100%;border-radius:2px 2px 0 0;}
 .calendar-date-list ul li .calendar-date-money2 p strong b{display:block;background:#f9f1e9;width:100%;border-radius:2px 2px 0 0; position:relative;}
 .calendar-date-list ul li .calendar-date-money2 p strong b span.money-label2{background:#fffaf1;border:solid 1px #e7c79c;font-size:12px;color:#d37c00; position:absolute;left:115%;bottom:-7px;height:14px;line-height:14px;border-radius:2px;font-weight:400;padding:0 2px;}
-.calendar-date-list ul li .calendar-date-money2 p strong b span.money-label2 i{background:url(../images/icon_03.png) no-repeat;width:4px;height:7px; display:block; position:absolute;left:-4px;top:3px;}
+.calendar-date-list ul li .calendar-date-money2 p strong b span.money-label2 i{background:url(/images/icon_03.png) no-repeat;width:4px;height:7px; display:block; position:absolute;left:-4px;top:3px;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-money2 p strong,.calendar-date-list ul li.current .calendar-date-list-bg .calendar-date-money2 p strong{background:#ffcca6;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-money2 p span,.calendar-date-list ul li.current .calendar-date-list-bg .calendar-date-money2 p span{color:#fff;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-money2 p strong b,.calendar-date-list ul li.current .calendar-date-list-bg .calendar-date-money2 p strong b{background:#f17b4d;}
@@ -271,8 +271,8 @@
 .ui-window-1 h3.title{ height:35px; line-height:35px; background:#a79e9e; position:relative; color:#fff; padding-left:10px; font-weight:normal; font-size:12px;}
 .ui-window-1 .title span{ float:left; height:38px; padding-left:35px; font-size:15px;}
 .ui-window-1 .content{ padding:25px;}
-.ui-window-1 .title .close{ position:absolute; right:14px; top:11px; width:13px; height:13px; background:url(../images/close.png) 0 0 no-repeat;}
-.blackBg{ display:none ;position:fixed; left:0; top:0; bottom:0; right:0;background:url(../images/bg_black.png);z-index:9;}
+.ui-window-1 .title .close{ position:absolute; right:14px; top:11px; width:13px; height:13px; background:url(/images/close.png) 0 0 no-repeat;}
+.blackBg{ display:none ;position:fixed; left:0; top:0; bottom:0; right:0;background:url(/images/bg_black.png);z-index:9;}
 .popup-date-form{margin:15px 28px;}
 .popup-date-form-t1{background:#ff4900;width:348px;padding:10px 0 10px 22px;color:#fff;font-size:18px;line-height:36px;border-radius:2px;}
 .popup-date-form-t1-yellow{background:#ffb71d;}
@@ -294,7 +294,7 @@
 .deta-notes-btn{text-align:center;}
 .deta-notes-btn a{background:#ff5917;padding:5px 10px;color:#fff;margin:0 5px;line-height:22px;*line-height:28px;}
 .deta-notes-btn a:hover{background:#d23c00;}
-.calendar-date-box a.calendar-date-add{width:20px;height:20px; display:block;background:url(../images/add01.png) no-repeat; position:absolute;top:6px;right:8px;}
+.calendar-date-box a.calendar-date-add{width:20px;height:20px; display:block;background:url(/images/add01.png) no-repeat; position:absolute;top:6px;right:8px;}
 .calendar-date-list ul li .calendar-date-list-bg:hover .calendar-date-add{background-position:top right; cursor:pointer;}
 .calendar-date-list ul li.current .calendar-date-add{background-position:top right; cursor:pointer;}
 .date-notes ul{}
@@ -310,7 +310,7 @@
 .remarks-list table td a{color:#2251ff; text-decoration:underline;}
 .date-notes-tips{margin:10px 0 -10px 18px;position:relative;}
 .date-notes-tips input{ vertical-align:middle;}
-.date-notes-tips a.icon-delete{background:url(../images/icon_delete.png) no-repeat;width:13px;height:14px;display:block;position:absolute;right:20px;top:2px;}
+.date-notes-tips a.icon-delete{background:url(/images/icon_delete.png) no-repeat;width:13px;height:14px;display:block;position:absolute;right:20px;top:2px;}
 .date-notes-tips-box{padding:25px 22px 0 30px;}
 .date-notes-tips-box input[type="checkbox"]{margin:0 8px 0 6px; vertical-align:middle;}
 .date-notes-tips-box input[type="text"]{border:solid 1px #e4e4e4;height:22px;line-height:22px;color:#666;border-radius:2px;margin:0 8px 0 0;}
@@ -323,5 +323,5 @@
 .fanye ul li{float:left;margin:0 3px;color:#999;}
 .fanye ul li a{width:25px;height:25px;display:block;background:#fff;border:solid 1px #e5e5e5;color:#999;line-height:25px; text-align:center;border-radius:2px;}
 .fanye ul li a:hover,.fanye ul li.current a{background:#ff5917;color:#fff;border:solid 1px #ff5917;}
-.fanye ul li.fanye-left a{background:#d7d7d7 url(../images/fanye_arrow.png) no-repeat;}
-.fanye ul li.fanye-right a{background:#d7d7d7 url(../images/fanye_arrow.png) top right no-repeat;}
+.fanye ul li.fanye-left a{background:#d7d7d7 url(/images/fanye_arrow.png) no-repeat;}
+.fanye ul li.fanye-right a{background:#d7d7d7 url(/images/fanye_arrow.png) top right no-repeat;}

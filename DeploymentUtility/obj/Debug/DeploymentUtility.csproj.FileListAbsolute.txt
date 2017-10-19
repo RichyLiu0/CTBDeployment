@@ -3,3 +3,8 @@ D:\MyWork\Gits\CTBDeployment\DeploymentUtility\bin\Debug\DeploymentUtility.pdb
 D:\MyWork\Gits\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.csprojResolveAssemblyReference.cache
 D:\MyWork\Gits\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.dll
 D:\MyWork\Gits\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\DeploymentUtility.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\DeploymentUtility.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.csprojResolveAssemblyReference.cache
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.pdb

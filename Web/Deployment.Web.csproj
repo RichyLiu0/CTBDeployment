@@ -368,6 +368,8 @@
     <Content Include="Images\yzm.png" />
     <Content Include="Images\yzm_03.png" />
     <Content Include="Images\yzm_07.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="Menu.aspx" />
     <Content Include="Scripts\common.js" />
     <Content Include="Scripts\dropdown.js" />
     <Content Include="Scripts\echarts.js" />
@@ -459,6 +461,7 @@
     <Content Include="Styles\bodyCss.css" />
     <Content Include="Styles\common.css" />
     <Content Include="Styles\main.css" />
+    <Content Include="Top.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

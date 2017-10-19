@@ -66,9 +66,9 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CTBDeployment" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" >
         <EntityContainer Name="CTBDeploymentEntity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="D_Project" EntityType="CTBDeployment.D_Project" />
-          <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
           <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.D_ProjectPackage" />
           <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.D_SqlServer" />
+          <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
         </EntityContainer>
         <EntityType Name="D_Project">
           <Key>
@@ -77,21 +77,6 @@
           <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ProjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
-          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="D_ProjectCodeServer">
-          <Key>
-            <PropertyRef Name="ServerID" />
-          </Key>
-          <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="ServerIndex" Nullable="false" />
-          <Property Type="Int32" Name="DeploymentType" Nullable="false" />
-          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Path" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
           <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -119,6 +104,21 @@
           <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
           <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="D_ProjectCodeServer">
+          <Key>
+            <PropertyRef Name="ServerID" />
+          </Key>
+          <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ServerIndex" Nullable="false" />
+          <Property Type="Int32" Name="DeploymentType" Nullable="false" />
+          <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Path" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -136,22 +136,6 @@
                 <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
                 <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="D_ProjectCodeServer">
-            <EntityTypeMapping TypeName="CTBDeployment.D_ProjectCodeServer">
-              <MappingFragment StoreEntitySet="D_ProjectCodeServer">
-                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="Remark" ColumnName="Remark" />
-                <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
-                <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
-                <ScalarProperty Name="Path" ColumnName="Path" />
-                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-                <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
-                <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
-                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -180,6 +164,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="D_ProjectCodeServer">
+            <EntityTypeMapping TypeName="CTBDeployment.D_ProjectCodeServer">
+              <MappingFragment StoreEntitySet="D_ProjectCodeServer">
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
+                <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
+                <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
+                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -203,9 +203,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6501d824a1f1488bb091ff15693993e3" Name="关系图1">
         <EntityTypeShape EntityType="CTBDeployment.D_Project" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CTBDeployment.D_ProjectCodeServer" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="CTBDeployment.D_ProjectPackage" Width="1.5" PointX="4.75" PointY="0.75" />
         <EntityTypeShape EntityType="CTBDeployment.D_SqlServer" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CTBDeployment.D_ProjectCodeServer" Width="1.5" PointX="2.6167203684415297" PointY="29.388893781876607" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

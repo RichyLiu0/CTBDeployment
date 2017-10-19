@@ -15,22 +15,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="D_ProjectCodeServer">
-      <EntityTypeMapping TypeName="CTBDeployment.D_ProjectCodeServer">
-        <MappingFragment StoreEntitySet="D_ProjectCodeServer">
-          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
-          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-          <ScalarProperty Name="Remark" ColumnName="Remark" />
-          <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
-          <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
-          <ScalarProperty Name="Path" ColumnName="Path" />
-          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
-          <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
-          <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
-          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="D_ProjectPackage">
       <EntityTypeMapping TypeName="CTBDeployment.D_ProjectPackage">
         <MappingFragment StoreEntitySet="D_ProjectPackage">
@@ -52,6 +36,22 @@
           <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
           <ScalarProperty Name="ConnectionStr" ColumnName="ConnectionStr" />
           <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="D_ProjectCodeServer">
+      <EntityTypeMapping TypeName="CTBDeployment.D_ProjectCodeServer">
+        <MappingFragment StoreEntitySet="D_ProjectCodeServer">
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
+          <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
+          <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
           <ScalarProperty Name="ServerID" ColumnName="ServerID" />
         </MappingFragment>
       </EntityTypeMapping>

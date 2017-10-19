@@ -4,8 +4,8 @@
 @{
     var action = ViewBag.Action;
 }
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Edit</title>
@@ -13,6 +13,27 @@
 
     <script type="text/javascript">
 
+
+        $(document).ready(function () {
+
+            var initDType=@Html.Raw(Model.DeploymentType == 0 ? 10 : Model.DeploymentType);
+            $("#DeploymentType").val(initDType);
+            $("#DeploymentType").trigger("change");
+
+        });
+       
+
+        function DeploymentTypeChange(o)
+        {
+            var dType = $(o).val();
+            if (dType == 30) {
+                $(".FtpSetting").show();
+            }
+            else {
+                $(".FtpSetting").hide();
+            }
+        }
+  
         function TrySubmit() {
             if (!confirm("确认保存?")) {
                 return;
@@ -45,17 +66,17 @@
                     <th class="title_td">服务器编号：
                     </th>
                     <td>
-                        <input type="text" name="ServerIndex" notempty="项目编号" maxlength="30" value="@Model.ServerIndex" />
+                        <input type="text" name="ServerIndex"  @Html.Raw(ViewBag.Action == "Edit" ? "readonly=\"readonly\"" : "") notempty="项目编号" maxlength="30" value="@Model.ServerIndex" />
                     </td>
                 </tr>
                 <tr>
                     <th class="title_td">部署方式：
                     </th>
                     <td>
-                        <select name="DeploymentType" notempty="部署方式">
-                            <option value="10" @(Html.Raw(Model.DeploymentType == 10 ? "selected=\"selected\"" : ""))>文件路径部署</option>
-                            <option value="20" @(Html.Raw(Model.DeploymentType == 20 ? "selected=\"selected\"" : "")) >服务部署</option>
-                            <option value="30"@(Html.Raw(Model.DeploymentType == 30 ? "selected=\"selected\"" : "")) >Ftp部署</option>
+                        <select id="DeploymentType" name="DeploymentType" notempty="部署方式" onchange="DeploymentTypeChange(this)">
+                            <option value="10">文件路径部署</option>
+                            <option value="20">服务部署</option>
+                            <option value="30">Ftp部署</option>
                         </select>
                     </td>
                 </tr>
@@ -67,14 +88,14 @@
                     </td>
                 </tr>
 
-                <tr>
+                <tr class="FtpSetting">
                     <th class="title_td">Ftp用户：
                     </th>
                     <td>
                         <input type="text" name="FtpLoginUser" notempty="ftp用户" maxlength="250"   value="@Model.FtpLoginUser" />
                     </td>
                 </tr>
-                <tr>
+                <tr class="FtpSetting">
                     <th class="title_td">Ftp密码：
                     </th>
                     <td>

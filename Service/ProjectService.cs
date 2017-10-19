@@ -133,6 +133,51 @@ namespace DeploymentService
             return rs;
         }
 
+        public static ResponseResult UpdateProjectCodeServer(D_ProjectCodeServer projectServer)
+        {
+            var rs = new ResponseResult() { IsSucess = true };
+            var updateProject = UnitService.CTBDeployment.Find<D_ProjectCodeServer>(t => t.ServerID == projectServer.ServerID);
 
+            if (updateProject.IsNull())
+            {
+                rs.IsSucess = false;
+                rs.Message = "项目不存在";
+                return rs;
+            }
+
+            using (var uow = DeploymentDAO.UnitService.CTBDeployment)
+            {
+                updateProject.DeploymentType = projectServer.DeploymentType;
+                updateProject.Path = projectServer.Path;
+                updateProject.FtpLoginUser = projectServer.FtpLoginUser;
+                updateProject.FtpLoginPwd = projectServer.FtpLoginPwd;
+                updateProject.Remark = projectServer.Remark;
+                uow.Update(updateProject);
+                uow.Commit();
+            }
+
+            rs.IsSucess = true;
+            rs.Message = "保存成功";
+
+            return rs;
+        }
+
+        public static ResponseResult RemoveProjectCodeServer(string  ServerID)
+        {
+            var rs = new ResponseResult() { IsSucess = true };
+            var updateProject = UnitService.CTBDeployment.Find<D_ProjectCodeServer>(t => t.ServerID == ServerID);
+             
+            using (var uow = DeploymentDAO.UnitService.CTBDeployment)
+            {
+                
+                uow.Delete(updateProject);
+                uow.Commit();
+            }
+
+            rs.IsSucess = true;
+            rs.Message = "删除成功";
+
+            return rs;
+        }
     }
 }

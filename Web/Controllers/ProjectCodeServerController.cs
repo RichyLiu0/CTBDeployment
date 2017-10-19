@@ -63,32 +63,39 @@ namespace Deployment.Web.Controllers
             return View("~/Views/Shared/ResponseHandle.cshtml");
         }
 
-        //    public ActionResult Edit(string ProjectID)
-        //    {
-        //        ViewBag.Action = "Edit";
-        //        var project = QueryService.CTBDeployment.Find<D_Project>(t => t.ProjectID == ProjectID);
+        public ActionResult Edit(string ServerID)
+        {
+            ViewBag.Action = "Edit";
+            var project = QueryService.CTBDeployment.Find<D_ProjectCodeServer>(t => t.ServerID == ServerID);
 
-        //        if (project.IsNull())
-        //        {
-        //            Response.Write("参数错误");
-        //            return View("~/Views/Shared/ResponseHandle.cshtml");
-        //        }
+            if (project.IsNull())
+            {
+                Response.Write("参数错误");
+                return View("~/Views/Shared/ResponseHandle.cshtml");
+            }
 
-        //        return View("~/Views/Project/Edit.cshtml", project);
-        //    }
+            return View("~/Views/ProjectCodeServer/Edit.cshtml", project);
+        }
 
 
-        //    [HttpPost]
-        //    public ActionResult EditSubmit()
-        //    {
-        //        var project = new D_Project();
-        //        project.FillWithForm();
-        //        project.CreateUser = "admin";
-        //        project.CreateTime = DateTime.Now;
+        [HttpPost]
+        public ActionResult EditSubmit()
+        {
+            var project = new D_ProjectCodeServer();
+            project.FillWithForm();
+            var rs = ProjectService.UpdateProjectCodeServer(project);
+            Response.Write(rs.ToJson());
+            return View("~/Views/Shared/ResponseHandle.cshtml");
+        }
 
-        //        var rs = ProjectService.Update(project);
-        //        Response.Write(rs.ToJson());
-        //        return View("~/Views/Shared/ResponseHandle.cshtml");
-        //    }
+        [HttpPost]
+        public ActionResult RemoveSubmit(string ServerID)
+        {
+            var project = new D_ProjectCodeServer();
+            project.FillWithForm();
+            var rs = ProjectService.RemoveProjectCodeServer(ServerID);
+            Response.Write(rs.ToJson());
+            return View("~/Views/Shared/ResponseHandle.cshtml");
+        }
     }
 }

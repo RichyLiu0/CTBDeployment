@@ -12,6 +12,28 @@
             InitSearch();
             InitListOrderBy();
         });
+
+        function DeleteServer(serverId)
+        {
+            if(confirm("确定删除?")==false){
+                return ;
+            }
+            AppCall({
+                Action: "/ProjectCodeServer/RemoveSubmit",
+                Data: {
+                    ServerID: serverId
+                },
+                CallBack: function (jr) {
+                    if (jr.IsSucess) {
+                        alert(jr.Message)
+                        window.location = window.location;
+                    }
+                    else {
+                        alert(jr.Message)
+                    }
+                }
+            });
+        }
     </script>
 </head>
 <body>
@@ -24,8 +46,7 @@
 
                 <td class="std">服务器编号</td>
                 <td class="ttd">
-                    
-                     <input search="ProjectId" type="hidden"  value="@("ProjectId".ValueOfQuery())" class="searchInput"/>
+                    <input search="ProjectId" type="hidden"  value="@("ProjectId".ValueOfQuery())" class="searchInput"/>
                     <input search="ServerIndex" type="text" style="width: 195px;" class="searchInput" rtip="服务器编号" />
                 </td>
                 <td class="std">服务器类型</td>
@@ -40,6 +61,7 @@
                         <input type="button" class="ButtonCss" value="添加服务器" onclick="ShowWin('/ProjectCodeServer/Create?ProjectID=@("ProjectID".ValueOfQuery())    ',  420, 340,'添加')" />
                     </span>
                 </td>
+
             </tr>
         </table>
     </div>
@@ -57,7 +79,7 @@
                     <th>备注</th>
                     <th>创建时间</th>
                     <th>创建人</th>
-
+                    <th>操作</th>
                 </tr>
             </tbody>
             @foreach (var item in Model.ResultList)
@@ -67,30 +89,21 @@
 
                     <td align="left">@item.ServerIndex
                     </td>
-
-
-                    <td align="left">@item.DeploymentType
+                    <td align="left"> 
+                        @(item.DeploymentType.ToEnum<DeploymentModel.EnumType.DeploymentType>())
                     </td>
-
-
                     <td align="left">@item.Path
                     </td>
-
-
                     <td align="left">@item.Remark
                     </td>
-
-
                     <td align="left">@item.CreateTime.ToString("yyyy-MM-dd HH:mm:ss")
                     </td>
-
-
                     <td align="left">@item.CreateUser
                     </td>
-
                     <td>
                         <a class="aico" href="javascript:ShowWin('/ProjectCodeServer/Edit?ServerID=@item.ServerID', 420, 340,'编辑')"><span>编辑</span></a>
-                       
+                        &nbsp; &nbsp; &nbsp;
+                        <a class="aico"  href="javascript:DeleteServer('@(item.ServerID)');"><span>删除</span></a>
                     </td>
 
                 </tr>

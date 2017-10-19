@@ -2,9 +2,9 @@
 <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CTBDeployment" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
   <EntityContainer Name="CTBDeploymentEntity" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="D_Project" EntityType="CTBDeployment.D_Project" />
-    <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
     <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.D_ProjectPackage" />
     <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.D_SqlServer" />
+    <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
   </EntityContainer>
   <EntityType Name="D_Project">
     <Key>
@@ -13,21 +13,6 @@
     <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="ProjectCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
-    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="D_ProjectCodeServer">
-    <Key>
-      <PropertyRef Name="ServerID" />
-    </Key>
-    <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="ServerIndex" Nullable="false" />
-    <Property Type="Int32" Name="DeploymentType" Nullable="false" />
-    <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Path" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
     <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -52,6 +37,21 @@
     <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="ConnectionStr" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="D_ProjectCodeServer">
+    <Key>
+      <PropertyRef Name="ServerID" />
+    </Key>
+    <Property Type="String" Name="ServerID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ServerIndex" Nullable="false" />
+    <Property Type="Int32" Name="DeploymentType" Nullable="false" />
+    <Property Type="String" Name="ProjectID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Path" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
     <Property Type="String" Name="CreateUser" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>

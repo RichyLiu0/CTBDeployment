@@ -24,3 +24,22 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\zh-Hans\EntityFrame
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\obj\Debug\DeploymentDAO.csprojResolveAssemblyReference.cache
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\obj\Debug\DeploymentDAO.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\obj\Debug\DeploymentDAO.pdb
+<<<<<<< HEAD
+=======
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\EntityFramework.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\EntityFramework.xml
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DAO\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\DeploymentDAO.dll.config
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\DeploymentDAO.dll
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\DeploymentDAO.pdb
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\DeploymentModel.dll
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\EntityFramework.dll
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\Ucsmy.Framework.dll
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\LitJson.dll
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\DeploymentModel.pdb
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\EntityFramework.xml
+D:\MyWork\Gits\CTBDeployment\DAO\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\MyWork\Gits\CTBDeployment\DAO\obj\Debug\DeploymentDAO.csprojResolveAssemblyReference.cache
+D:\MyWork\Gits\CTBDeployment\DAO\obj\Debug\DeploymentDAO.dll
+D:\MyWork\Gits\CTBDeployment\DAO\obj\Debug\DeploymentDAO.pdb
+>>>>>>> 06444782f74a7d572c9761a49342fa92f2d1bac5

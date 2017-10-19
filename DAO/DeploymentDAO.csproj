@@ -98,6 +98,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CTBDeployment.edmx.sql" />
     <Content Include="CTBDeployment.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CTBDeployment.cs</LastGenOutput>

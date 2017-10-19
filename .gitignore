@@ -1,2 +1,15 @@
 *.pdb,build/,bin/,*.cache,Debug/
 
+Model/obj/Debug/DeploymentModel.dll
+Service/bin/Debug/DeploymentDAO.dll
+Service/bin/Debug/DeploymentDAO.pdb
+Service/bin/Debug/DeploymentModel.pdb
+Service/bin/Debug/DeploymentModel.dll
+Service/bin/Debug/DeploymentService.pdb
+DAO/bin/Debug/DeploymentUtility.dll
+Model/obj/Debug/DeploymentModel.dll
+Model/obj/Debug/DeploymentModel.pdb
+Service/bin/Debug/DeploymentService.dll
+Service/bin/Debug/DeploymentService.pdb
+Service/bin/Debug/DeploymentModel.pdb
+Service/bin/Debug/DeploymentModel.dll

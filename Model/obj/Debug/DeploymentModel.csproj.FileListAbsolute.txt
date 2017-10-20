@@ -17,3 +17,4 @@ D:\MyWork\Gits\CTBDeployment\Model\bin\Debug\LitJson.dll
 D:\MyWork\Gits\CTBDeployment\Model\obj\Debug\DeploymentModel.dll
 D:\MyWork\Gits\CTBDeployment\Model\obj\Debug\DeploymentModel.pdb
 D:\MyWork\Gits\CTBDeployment\Model\obj\Debug\DeploymentModel.csprojResolveAssemblyReference.cache
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Model\obj\Debug\DeploymentModel.csprojResolveAssemblyReference.cache

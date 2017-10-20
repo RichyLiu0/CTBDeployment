@@ -21,10 +21,9 @@
                 
                 
                //3执行Task
-               //  var rs = DeploymentService.DeployService.ExcuteDeployTask("32b42177-9d9a-4e36-b410-57a834c93a6b");
-               // Response.Write(rs.ToJson());
-                var rs = DeploymentService.DeployService.ExcuteDeployTask("89332250-af2d-4986-8755-289c8c696131");
+                var rs = DeploymentService.DeployService.ExcuteDeployTask("70962f45-8131-45e4-818c-579282910ff1");
                 Response.Write(rs.ToJson());
+               
                  
                 
             %>

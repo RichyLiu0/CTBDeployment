@@ -141,11 +141,23 @@ namespace DeploymentService
                     rs.Message = "参数错误,部署包不存在";
                     return rs;
                 }
-                var fromPath = GetDepoymentUnZipPath(package);
-                var toPath = task.DeploymentPath;
+                    var fromPath = GetDepoymentUnZipPath(package);
+                    var toPath = task.DeploymentPath;
 
-                DeploymentUtility.FileScanCommon.FolderCopy(fromPath, toPath);
-                rs.Message = "布署成功";
+                if (task.DeploymentType == (int)EnumType.DeploymentType.文件路径布署)
+                {
+                
+                    DeploymentUtility.FileScanCommon.FolderCopy(fromPath, toPath);
+                    rs.Message = "布署成功";
+                }
+                else if (task.DeploymentType == (int)EnumType.DeploymentType.Ftp布署)
+                {
+                    DeploymentUtility.FtpHelper ftpHelper = new DeploymentUtility.FtpHelper(toPath, task.FtpLoginUser, task.FtpLoginPwd);
+                    ftpHelper.UploadDirectory(fromPath,toPath,"");
+                    rs.Message = "布署成功";
+
+                }
+
             }
             catch (Exception ex)
             {

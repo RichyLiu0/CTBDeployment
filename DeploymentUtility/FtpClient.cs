@@ -27,18 +27,7 @@ namespace DeploymentUtility
 
                 using (var requestStream = request.GetRequestStream())
                 {
-                    //using (stream)
-                    //{
-                    //Byte[] buffer = new Byte[4096];
-                    //var offset = 0;
-                    //offset = stream.Read(buffer, 0, buffer.Length);
-                    //while (offset > 0)
-                    //{
-                    //    requestStream.Write(buffer, 0, offset);
-                    //    offset = stream.Read(buffer, 0, buffer.Length);
-                    //}
                     stream.CopyTo(requestStream);
-                    //}
                 }
                 FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 

@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeployService.cs" />
     <Compile Include="ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,6 +55,10 @@
     <ProjectReference Include="..\DAO\DeploymentDAO.csproj">
       <Project>{f5a17dea-1db3-424a-ade3-93d25bf238ff}</Project>
       <Name>DeploymentDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DeploymentUtility\DeploymentUtility.csproj">
+      <Project>{9da96ea6-b4ef-4865-aeb5-4424e22af52a}</Project>
+      <Name>DeploymentUtility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\DeploymentModel.csproj">
       <Project>{cd3f02fa-9ea2-431e-abcc-e24540fdf6ff}</Project>

@@ -1,11 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CTBDeployment" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
   <EntityContainer Name="CTBDeploymentEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="D_DeployTask" EntityType="CTBDeployment.D_DeployTask" />
     <EntitySet Name="D_Project" EntityType="CTBDeployment.D_Project" />
     <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
     <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.D_ProjectPackage" />
     <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.D_SqlServer" />
   </EntityContainer>
+  <EntityType Name="D_DeployTask">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Type="String" Name="TaskID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProejctID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProejctCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PackageID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PackageVersion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PackageName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ServerID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ServerIndex" Nullable="false" />
+    <Property Type="Int32" Name="DeploymentType" Nullable="false" />
+    <Property Type="String" Name="DeploymentPath" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="DeployTime" Precision="3" />
+  </EntityType>
   <EntityType Name="D_Project">
     <Key>
       <PropertyRef Name="ProjectID" />

@@ -34,3 +34,6 @@ D:\MyWork\Gits\CTBDeployment\Service\bin\Debug\DeploymentModel.pdb
 D:\MyWork\Gits\CTBDeployment\Service\obj\Debug\DeploymentService.csprojResolveAssemblyReference.cache
 D:\MyWork\Gits\CTBDeployment\Service\obj\Debug\DeploymentService.dll
 D:\MyWork\Gits\CTBDeployment\Service\obj\Debug\DeploymentService.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentUtility.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Service\bin\Debug\DeploymentUtility.pdb

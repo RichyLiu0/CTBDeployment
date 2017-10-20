@@ -62,6 +62,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CTBDeployment.edmx</DependentUpon>
     </Compile>
+    <Compile Include="D_DeployTask.cs">
+      <DependentUpon>CTBDeployment.tt</DependentUpon>
+    </Compile>
     <Compile Include="D_Project.cs">
       <DependentUpon>CTBDeployment.tt</DependentUpon>
     </Compile>

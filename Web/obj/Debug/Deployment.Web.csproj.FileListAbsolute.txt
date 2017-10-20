@@ -163,3 +163,6 @@ D:\MyWork\Gits\CTBDeployment\Web\bin\zh-Hans\System.Web.WebPages.Razor.resources
 D:\MyWork\Gits\CTBDeployment\Web\obj\Debug\Deployment.Web.csprojResolveAssemblyReference.cache
 D:\MyWork\Gits\CTBDeployment\Web\obj\Debug\Deployment.Web.dll
 D:\MyWork\Gits\CTBDeployment\Web\obj\Debug\Deployment.Web.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentUtility.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\Web\bin\DeploymentUtility.pdb

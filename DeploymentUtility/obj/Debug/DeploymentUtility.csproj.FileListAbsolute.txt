@@ -7,3 +7,7 @@ C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\Deplo
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\DeploymentUtility.pdb
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.dll
 C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.pdb
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\Ucsmy.Framework.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\bin\Debug\LitJson.dll
+C:\Users\rui_pc\Documents\GitHub\CTBDeployment\DeploymentUtility\obj\Debug\DeploymentUtility.csprojResolveAssemblyReference.cache

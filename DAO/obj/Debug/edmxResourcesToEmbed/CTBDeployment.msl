@@ -3,6 +3,28 @@
   <Alias Key="Model" Value="CTBDeployment" />
   <Alias Key="Target" Value="CTBDeployment.Store" />
   <EntityContainerMapping CdmEntityContainer="CTBDeploymentEntity" StorageEntityContainer="CTBDeploymentStoreContainer">
+    <EntitySetMapping Name="D_DeployTask">
+      <EntityTypeMapping TypeName="CTBDeployment.D_DeployTask">
+        <MappingFragment StoreEntitySet="D_DeployTask">
+          <ScalarProperty Name="DeployTime" ColumnName="DeployTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
+          <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
+          <ScalarProperty Name="DeploymentPath" ColumnName="DeploymentPath" />
+          <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
+          <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
+          <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+          <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+          <ScalarProperty Name="PackageVersion" ColumnName="PackageVersion" />
+          <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProejctCode" ColumnName="ProejctCode" />
+          <ScalarProperty Name="ProejctID" ColumnName="ProejctID" />
+          <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="D_Project">
       <EntityTypeMapping TypeName="CTBDeployment.D_Project">
         <MappingFragment StoreEntitySet="D_Project">

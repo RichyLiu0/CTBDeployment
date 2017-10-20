@@ -6,11 +6,33 @@
     <edmx:StorageModels>
     <Schema Namespace="CTBDeployment.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="CTBDeploymentStoreContainer">
+          <EntitySet Name="D_DeployTask" EntityType="CTBDeployment.Store.D_DeployTask" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="D_Project" EntityType="CTBDeployment.Store.D_Project" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.Store.D_ProjectCodeServer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.Store.D_ProjectPackage" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.Store.D_SqlServer" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
+        <EntityType Name="D_DeployTask">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProejctID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProejctCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PackageID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PackageVersion" Type="nvarchar" MaxLength="50" />
+          <Property Name="PackageName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ServerID" Type="varchar" MaxLength="50" />
+          <Property Name="ServerIndex" Type="int" Nullable="false" />
+          <Property Name="DeploymentType" Type="int" Nullable="false" />
+          <Property Name="DeploymentPath" Type="nvarchar" MaxLength="250" />
+          <Property Name="FtpLoginUser" Type="nvarchar" MaxLength="150" />
+          <Property Name="FtpLoginPwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="DeployTime" Type="datetime" />
+        </EntityType>
         <EntityType Name="D_Project">
           <Key>
             <PropertyRef Name="ProjectID" />
@@ -65,11 +87,33 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CTBDeployment" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" >
         <EntityContainer Name="CTBDeploymentEntity" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="D_DeployTask" EntityType="CTBDeployment.D_DeployTask" />
           <EntitySet Name="D_Project" EntityType="CTBDeployment.D_Project" />
           <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.D_ProjectCodeServer" />
           <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.D_ProjectPackage" />
           <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.D_SqlServer" />
         </EntityContainer>
+        <EntityType Name="D_DeployTask">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Type="String" Name="TaskID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProejctID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProejctCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PackageID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PackageVersion" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PackageName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ServerID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ServerIndex" Nullable="false" />
+          <Property Type="Int32" Name="DeploymentType" Nullable="false" />
+          <Property Type="String" Name="DeploymentPath" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FtpLoginUser" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FtpLoginPwd" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DeployTime" Precision="3" />
+        </EntityType>
         <EntityType Name="D_Project">
           <Key>
             <PropertyRef Name="ProjectID" />
@@ -127,6 +171,28 @@
         <Alias Key="Model" Value="CTBDeployment" />
         <Alias Key="Target" Value="CTBDeployment.Store" />
         <EntityContainerMapping CdmEntityContainer="CTBDeploymentEntity" StorageEntityContainer="CTBDeploymentStoreContainer">
+          <EntitySetMapping Name="D_DeployTask">
+            <EntityTypeMapping TypeName="CTBDeployment.D_DeployTask">
+              <MappingFragment StoreEntitySet="D_DeployTask">
+                <ScalarProperty Name="DeployTime" ColumnName="DeployTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="FtpLoginPwd" ColumnName="FtpLoginPwd" />
+                <ScalarProperty Name="FtpLoginUser" ColumnName="FtpLoginUser" />
+                <ScalarProperty Name="DeploymentPath" ColumnName="DeploymentPath" />
+                <ScalarProperty Name="DeploymentType" ColumnName="DeploymentType" />
+                <ScalarProperty Name="ServerIndex" ColumnName="ServerIndex" />
+                <ScalarProperty Name="ServerID" ColumnName="ServerID" />
+                <ScalarProperty Name="PackageName" ColumnName="PackageName" />
+                <ScalarProperty Name="PackageVersion" ColumnName="PackageVersion" />
+                <ScalarProperty Name="PackageID" ColumnName="PackageID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProejctCode" ColumnName="ProejctCode" />
+                <ScalarProperty Name="ProejctID" ColumnName="ProejctID" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="D_Project">
             <EntityTypeMapping TypeName="CTBDeployment.D_Project">
               <MappingFragment StoreEntitySet="D_Project">
@@ -202,10 +268,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6501d824a1f1488bb091ff15693993e3" Name="关系图1">
-        <EntityTypeShape EntityType="CTBDeployment.D_Project" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CTBDeployment.D_ProjectCodeServer" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CTBDeployment.D_ProjectPackage" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="CTBDeployment.D_SqlServer" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CTBDeployment.D_DeployTask" Width="1.5" PointX="5.3118432878106105" PointY="25.145790171411722" />
+        <EntityTypeShape EntityType="CTBDeployment.D_Project" Width="1.5" PointX="1.3847182325016327" PointY="13.976142860006608" />
+        <EntityTypeShape EntityType="CTBDeployment.D_ProjectCodeServer" Width="1.5" PointX="9.04420001480924" PointY="6.0631004600148186" />
+        <EntityTypeShape EntityType="CTBDeployment.D_ProjectPackage" Width="1.5" PointX="9.83434981751924" PointY="2.8083392245733827" />
+        <EntityTypeShape EntityType="CTBDeployment.D_SqlServer" Width="1.5" PointX="5.6700110908923724" PointY="25.396318447495027" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

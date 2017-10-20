@@ -1,11 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CTBDeployment.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="CTBDeploymentStoreContainer">
+    <EntitySet Name="D_DeployTask" EntityType="CTBDeployment.Store.D_DeployTask" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="D_Project" EntityType="CTBDeployment.Store.D_Project" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="D_ProjectCodeServer" EntityType="CTBDeployment.Store.D_ProjectCodeServer" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="D_ProjectPackage" EntityType="CTBDeployment.Store.D_ProjectPackage" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="D_SqlServer" EntityType="CTBDeployment.Store.D_SqlServer" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
+  <EntityType Name="D_DeployTask">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Name="TaskID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProejctID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProejctCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProjectName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PackageID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PackageVersion" Type="nvarchar" MaxLength="50" />
+    <Property Name="PackageName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ServerID" Type="varchar" MaxLength="50" />
+    <Property Name="ServerIndex" Type="int" Nullable="false" />
+    <Property Name="DeploymentType" Type="int" Nullable="false" />
+    <Property Name="DeploymentPath" Type="nvarchar" MaxLength="250" />
+    <Property Name="FtpLoginUser" Type="nvarchar" MaxLength="150" />
+    <Property Name="FtpLoginPwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="DeployTime" Type="datetime" />
+  </EntityType>
   <EntityType Name="D_Project">
     <Key>
       <PropertyRef Name="ProjectID" />

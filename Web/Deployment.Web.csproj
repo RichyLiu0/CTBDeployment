@@ -140,11 +140,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ProjectCodeServerController.cs" />
+    <Compile Include="Controllers\ProjectPackageController.cs" />
+    <Compile Include="Extends\HtmlExtends.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\PageModel.cs" />
     <Compile Include="Models\ProjectCodeServerListVM.cs" />
+    <Compile Include="Models\UploadFileModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -477,6 +480,10 @@
     <Content Include="Views\Project\Edit.cshtml" />
     <Content Include="Views\ProjectCodeServer\Index.cshtml" />
     <Content Include="Views\ProjectCodeServer\Edit.cshtml" />
+    <Content Include="Views\Shared\UploadFile.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\ProjectPackage\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

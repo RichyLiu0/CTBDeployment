@@ -1,0 +1,71 @@
+﻿@model DeploymentDAO.D_ProjectPackage
+@{
+    var action = ViewBag.Action;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    @Html.Partial("~/Views/Shared/CommonResourcePartialView.cshtml")
+    <script type="text/javascript">
+        function uploadCallBack(data) {
+            if (data.IsOk) {
+                $("#PackageName").val(data.FileName);
+                $("#PackagePath").val(data.FilePath);
+            }
+            else {
+                alert(data.Message);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <input type="hidden" value="@Model.ProjectID" id="ProjectID" name="ProjectID"/>
+        <table border="0" align="center" cellpadding="0" cellspacing="0" class="table_1">
+            <tbody>
+                <tr>
+                    <th class="title_td">部署包名称</th>
+                    <td>
+                        <input type="text" id="PackageName" name="PackageName" notempty="项目名称" maxlength="30" value="@Model.PackageName" readonly="readonly"  style="width:300px" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">部署包地址</th>
+                    <td>
+                        <input type="text" id="PackagePath" name="PackagePath" notempty="部署包地址" maxlength="30" value="@Model.PackagePath" readonly="readonly" style="width:300px" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="title_td">部署包版本：
+                    </th>
+                    <td>
+                        <input type="text" name="Version" notempty="部署包版本" maxlength="30" value="@Model.Version"  />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="title_td thStyle" width="100" align="right">上传文件：
+                    </td>
+                    <td class="info_td_2">
+                        @Html.UploadFile(new Deployment.Web.Models.UploadFileModel()
+                            {
+                                FileId = "filePackage",
+                                Control = "ProjectPackage",
+                                Action = "FileUpLoad",
+                                JSCallBack = "uploadCallBack"
+                            })
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="保 存" class="ButtonCss" onclick="TrySubmit();" />
+                    </td>
+                </tr>
+
+        </table>
+
+
+    </form>
+</body>
+</html>

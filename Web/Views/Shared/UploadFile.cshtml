@@ -1,0 +1,26 @@
+﻿@model Deployment.Web.Models.UploadFileModel
+
+<input type="file" name="@Model.FileId" id="@Model.FileId" style="margin-bottom: 10px;">
+<input type="button" id="uploadPicButton" value="上传" onclick="uploadPic()">
+<script type="text/javascript">
+    function uploadPic() {
+        var pic = $('#@Model.FileId')[0].files[0];
+        if (!pic.name) {
+            alert("请选择文件");
+            return;
+        }
+        var fd = new FormData();
+        fd.append(new Date().getDate()+"_"+ pic.name, pic);
+        $.ajax({
+            url: "/@Model.Control/@Model.Action",
+            type: "post",
+            // Form数据
+            data: fd,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: @Model.JSCallBack
+        });
+
+    }
+</script>

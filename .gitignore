@@ -13,3 +13,15 @@ Service/bin/Debug/DeploymentService.dll
 Service/bin/Debug/DeploymentService.pdb
 Service/bin/Debug/DeploymentModel.pdb
 Service/bin/Debug/DeploymentModel.dll
+DeploymentUtility/FtpClient.cs
+DAO/bin/Debug/DeploymentDAO.dll
+DAO/bin/Debug/DeploymentDAO.pdb
+DAO/bin/Debug/DeploymentModel.dll
+DAO/bin/Debug/DeploymentModel.pdb
+DAO/obj/Debug/DeploymentDAO.csprojResolveAssemblyReference.cache
+DAO/obj/Debug/DeploymentDAO.dll
+DAO/obj/Debug/DeploymentDAO.pdb
+DAO/obj/Debug/DeploymentDAO.dll
+DAO/obj/Debug/DeploymentDAO.pdb
+DeploymentUtility/bin/Debug/DeploymentUtility.dll
+DeploymentUtility/bin/Debug/DeploymentUtility.pdb
